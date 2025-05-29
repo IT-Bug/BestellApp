@@ -1,0 +1,11 @@
+
+* {
+    font-family: "PublicaSan", sans-serif;
+    margin: 0;
+    background-color: grey;
+}
+
+@font-face {
+  font-family: 'PublicaSan';
+  src: url('../assets/font/PublicaSans/PublicaSans-Black.otf') format('otf');
+}
