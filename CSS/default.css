@@ -1,12 +1,12 @@
 
 * {
-    font-family: "PublicaSan", sans-serif;
+    font-family: "PublicaSan", serif;;
     margin: 0;
 }
 
 @font-face {
   font-family: 'PublicaSan';
-  src: url('../assets/font/PublicaSans/PublicaSans-Black.otf') format('otf');
+  src: url('../assets/font/PublicaSans/publica-sans-light.otf') format('opentype');
 }
 
 button {
