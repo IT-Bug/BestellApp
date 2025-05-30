@@ -1,21 +1,16 @@
 
-.my-img {
-    height: 300px;
-    border-radius: 160px;
-}
-
 main {
+
     background-image: url('../assets/image/background.png');
     background-size: cover;        
     background-repeat: no-repeat;  
-    background-position: center;   
     height: 80vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 30px;
+    
 }
 
 .menu-btn {
@@ -28,18 +23,6 @@ main {
     font-weight: bold;
 }
 
-footer {
-    background-color: #FFFFFF;
-    height: 30vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    left: 0;
-    bottom: 0;
-}
 
 .category {
     display: flex;
@@ -55,6 +38,3 @@ footer {
     border-radius: 8px;
 }
 
-.logo {
-    height: 70px;
-}
