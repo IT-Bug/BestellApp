@@ -45,6 +45,9 @@ section {
     text-align: center;
 }
 
+.category-headline {
+    color: #FF8000;
+}
 
 .category-logos {
     height: 90px;

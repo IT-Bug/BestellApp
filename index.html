@@ -11,16 +11,27 @@
     <link rel="stylesheet" href="./CSS/homepage.css">
     <link rel="stylesheet" href="./CSS/images.css">
     <link rel="stylesheet" href="./CSS/genrateBtn.css">
+    <link rel="stylesheet" href="./CSS/popup.css">
     <script src="script.js"></script>
+    <script src="./JS/language.js"></script>
 </head>
 
 
 <body>
 
     <header>
-        <img class="header-logo" src="./assets/logos/BestellAppLogo.png" alt="">
-        <img class="german" src="./assets/logos/german.png" alt="">
+        <img class="header-logo" src="./assets/logos/BestellAppLogo.png" alt="BestellApp Logo">
+        <img onclick="togglePopup()" class="logo" src="./assets/logos/german.png" alt="german language">
     </header>
+
+    <div class="popup" id="popup">
+        <div class="lang-headline">
+            <b>Land</b>
+        </div>
+        <div class="logo-text">
+            <img class="lang-logos" src="./assets/logos/unitedkingdom.png" alt=""><span>United Kingdom</span>
+        </div>
+    </div>
 
     <main>
         <img class="my-img" src="./assets/image/Ich.png" alt="">

@@ -9,11 +9,25 @@
     cursor: pointer;
 }
 
-.german {
-    height: 35px;
-    cursor: pointer;
+.header-logo:hover {
+    filter: drop-shadow(1px 3px 4px #0000008c);
 }
 
+.logo {
+    height: 35px;
+    cursor: pointer;
+    border-radius: 200px;
+}
+
+.logo:hover {
+    filter: drop-shadow(1px 3px 4px #0000008c);
+}
+
+.lang-logos {
+    height: 35px;
+    cursor: pointer;
+    border-radius: 200px;
+}
 
 .container-logo {
     height: 70px;
