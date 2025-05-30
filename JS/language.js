@@ -12,3 +12,39 @@ document.addEventListener('click', function (event) {
         popup.classList.remove('open-popup');
     }
 });
+
+// Country translate
+
+let translation = {
+    en: {
+        headline: "The best food near you!",
+        menuBtn: "To the menus",
+        spanTxt: "How to order",
+        ctgyHeadline: "IT'S REALLY NOT HARD",
+        step1Title: 'Click on "To the menus"',
+        step1Text: "We’ll show you all available menus. Maybe something’s in there for you.",
+        step2Title: "Decide what you're craving",
+        step2Text: "What are you waiting for... Hurry... before the hunger hits.",
+        step3Title: "Order delivery or pickup",
+        step3Text: "We deliver to your door, or you’re welcome to come pick it up.",
+        footerImp: "Imprint",
+        footerDatstz: "Privacy Policy",
+        footerContact: "Contact"
+    },
+
+    de: {
+        headline: "Das Beste Essen in Deiner Nähe!",
+        menuBtn: "Ab zu den Menüs",
+        spanTxt: "So bestellst Du",
+        ctgyHeadline: "SO SCHWER IST ES NICHT.",
+        step1Title: 'Klicke auf "Ab zu den Menüs"',
+        step1Text: "Wir zeigen Dir alle Menüs die wir da haben. Vielleicht ist für Dich auch was dabei.",
+        step2Title: "Entscheide, worauf Du bock hast",
+        step2Text: "Worauf wartest Du... Schnell... bevor der Hunger eilt.",
+        step3Title: "Bestelle Lieferung oder Abholung",
+        step3Text: "Wir liefern bis zur Tür, kannst aber auch gerne zur Abholung vorbei kommen.",
+        footerImp: "Impressum",
+        footerDatstz: "Datenschutz",
+        footerContact: "Kontakt"
+    },
+}
