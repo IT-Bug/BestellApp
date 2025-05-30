@@ -21,16 +21,24 @@
 
     <header>
         <img class="header-logo" src="./assets/logos/BestellAppLogo.png" alt="BestellApp Logo">
-        <img onclick="togglePopup()" class="logo" src="./assets/logos/german.png" alt="german language">
+        <img onclick="togglePopup()" class="logo" src="./assets/logos/world.png" alt="language">
     </header>
 
     <div class="popup" id="popup">
+        
         <div class="lang-headline">
-            <b>Land</b>
+            <b data-i18n="langHeadline">Land</b>
         </div>
-        <div class="logo-text">
-            <img class="lang-logos" src="./assets/logos/unitedkingdom.png" alt=""><span>United Kingdom</span>
+
+        <div class="main-logo-txt-container">
+            <div class="logo-txt-container" onclick="translatePage('en')">
+                <img class="lang-logos" src="./assets/logos/unitedkingdom.png" alt="English"><span data-i18n="UK">Vereinigtes Königreich</span>
+            </div>
+            <div class="logo-txt-container" onclick="translatePage('de')">
+                <img class="lang-logos" src="./assets/logos/german.png"  alt="Deutsch"><span data-i18n="DE">Deutschland</span>
+            </div>
         </div>
+
     </div>
 
     <main>

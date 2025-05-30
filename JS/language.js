@@ -15,8 +15,11 @@ document.addEventListener('click', function (event) {
 
 // Country translate
 
-let translation = {
+let translations = {
     en: {
+        langHeadline: "Country",
+        UK: "United Kingdom",
+        DE: "Germany",
         headline: "The best food near you!",
         menuBtn: "To the menus",
         spanTxt: "How to order",
@@ -33,6 +36,9 @@ let translation = {
     },
 
     de: {
+        langHeadline: "Land",
+        UK: "Vereinigtes Königreich",
+        DE: "Deutschland",
         headline: "Das Beste Essen in Deiner Nähe!",
         menuBtn: "Ab zu den Menüs",
         spanTxt: "So bestellst Du",
@@ -47,4 +53,17 @@ let translation = {
         footerDatstz: "Datenschutz",
         footerContact: "Kontakt"
     },
+}
+
+
+function translatePage(lang) { // (parameter) "de" or "en"
+    let elements = document.querySelectorAll('[data-i18n]'); // searched all Attributes with data-i18n="..." and saved
+
+    elements.forEach(el => { // forEach is a Loop & el executes a function for each individual element.
+        let key = el.getAttribute('data-i18n');
+
+        if (translations[lang] && translations[lang][key]) {
+            el.innerText = translations[lang][key];
+        }
+    });
 }
