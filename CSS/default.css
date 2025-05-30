@@ -4,9 +4,17 @@
     margin: 0;
 }
 
+body {
+  transition: opacity 0.5s ease;
+}
+
 @font-face {
   font-family: 'PublicaSan';
   src: url('../assets/font/PublicaSans/publica-sans-light.otf') format('opentype');
+}
+
+a {
+  text-decoration: none;
 }
 
 h3 {
