@@ -9,9 +9,30 @@
   src: url('../assets/font/PublicaSans/publica-sans-light.otf') format('opentype');
 }
 
+h3 {
+  font-size: large;
+}
+
+span {
+  font-size: 15px;
+}
+
 button {
   cursor: pointer;
 }
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  transition: 0.2s ease-in;
+  color: #ff8000;
+}
+
+
+
+
 
 /* Scrollbar Generated */
 
