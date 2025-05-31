@@ -12,3 +12,7 @@
     top: 41.5%;
     border-radius: 150px;
 }
+
+.body-template {
+    height: 100vh;
+}
