@@ -2,7 +2,7 @@
 .popup {
     width: 150px;
     background: #fff;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 1px;
     text-align: center;
@@ -20,6 +20,7 @@
     flex-direction: column;
     gap: 20px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 9999;
 }
 
 .open-popup {

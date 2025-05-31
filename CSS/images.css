@@ -32,3 +32,8 @@
 .container-logo {
     height: 70px;
 }
+
+.chg-logos {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}

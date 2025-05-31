@@ -17,6 +17,7 @@ document.addEventListener('click', function (event) {
 
 let translations = {
     en: {
+        basketHeadline: "Shopping cart",
         langHeadline: "Country",
         UK: "United Kingdom",
         DE: "Germany",

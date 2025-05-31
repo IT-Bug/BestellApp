@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../CSS/images.css">
     <link rel="stylesheet" href="../CSS/genrateBtn.css">
     <link rel="stylesheet" href="../CSS/popup.css">
-    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../CSS/menucard.css">
+    <link rel="stylesheet" href="../CSS/sidenav.css">
     <script src="../JS/homepageLanguage.js"></script>
 
 </head>
@@ -20,6 +21,8 @@
 
 <body>
 
+    <!-- Header Section -->
+<div class="main-content">
     <header>
         <a href="../index.html"><img class="header-logo" src="../assets/logos/BestellAppLogo.png" alt="BestellApp Logo"></a>
         <img onclick="togglePopup()" class="logo" src="../assets/logos/world.png" alt="language">
@@ -41,8 +44,59 @@
         </div>
     </div>
 
+    <!-- Side Nav -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"></a>
+        <h2 data-i18n="basketHeadline" style="padding: 30px 20px; display: flex; justify-content: center;">Warenkorb</h2>
+        
+        <div class="change-container">
+            <div class="change-logo-txt-container">
+                <div class="icon-basket">
+                    <img class="chg-logos" src="../assets/logos/car.png" height="30px" alt="Lieferung icon">
+                </div>
+                <div>
+                    <p data-i18n="basketStep1Titel">Lieferung</p>
+                    <p style="font-size: small;">15-35 min</p>
+                </div>
+            </div>
+            
+            <div class="change-logo-txt-container">
+                <div class="icon-basket">
+                    <img class="chg-logos" src="../assets/logos/abholung.png" height="30px" alt="abholung logo">
+                </div>
+                <div>
+                    <p data-i18n="basketStep2Titel">Abholung</p>
+                    <p style="font-size: small;">15 min</p>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div id="basket" class="basket">
+            <img src="" alt="warenkorb logo">
+            <h2>Fülle deinen Warenkorb</h2>
+            <p>Suche Dir aus der Menü Karte etwas hinzu und bestelle dein Essen.</p>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+
+    <div class="test">Hallo</div>
 
 
+
+
+
+    <!-- Footer Section -->
+    
+    <footer>
+        <a data-i18n="footerImp" class="footer-links" href="">Impressum</a>
+        <a data-i18n="footerDatstz" class="footer-links" href="">Datenschutz</a>
+        <a data-i18n="footerContact" class="footer-links" href="">Kontakt</a>
+    </footer>
+
+</div>
 </body>
 
 

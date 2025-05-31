@@ -1,0 +1,40 @@
+
+/* This side Basket menu */
+
+.sidenav {
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    top: 1;
+    right: 0;
+    background: rgba(255, 255, 255, 0.288);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.change-container {
+    background-color: rgba(78, 78, 78, 0.185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 8px 100px;
+    margin: 15px;
+    gap: 20px;
+}
+
+.change-logo-txt-container {
+    display: flex;
+    gap: 5px;
+    text-align: center;
+}
+
+.basket {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
