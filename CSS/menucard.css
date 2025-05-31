@@ -1,7 +1,14 @@
 .menu-content {
     height: 40vh;
     background-image: url('../assets/image/russischtraditionell.png');
-
-
+    background-position: center;
+    background-repeat: no-repeat;  
+    background-size: cover;
 }
 
+.myPic {
+    height: 150px;
+    position: absolute;
+    top: 41.5%;
+    border-radius: 150px;
+}
