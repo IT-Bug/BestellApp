@@ -1,9 +1,11 @@
+
 .menu-content {
     height: 40vh;
     background-image: url('../assets/image/russischtraditionell.png');
     background-position: center;
     background-repeat: no-repeat;  
     background-size: cover;
+    padding-bottom: 50px;
 }
 
 .myPic {
@@ -15,4 +17,36 @@
 
 .body-template {
     height: 100vh;
+}
+
+.headline-rating {
+    margin: 50px 15px;
+    background-color: rgba(196, 162, 119, 0.377);
+    width: 250px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.rating {
+    color: green;
+}
+
+.dish-catogery {
+    background-color: rgba(196, 162, 119, 0.377);
+    display: flex;
+    gap: 10px;
+    width: 580px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.ctgy-btn {
+    border-radius: 20px;
+
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.ctgy-btn:hover {
+    background-color: rgba(82, 82, 82, 0.178);
 }

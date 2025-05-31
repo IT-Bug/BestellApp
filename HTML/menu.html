@@ -23,12 +23,12 @@
 <body>
 
     <!-- Header Section -->
-<div class="main-content">
     <header>
         <a href="../index.html"><img class="header-logo" src="../assets/logos/BestellAppLogo.png" alt="BestellApp Logo"></a>
         <img onclick="togglePopup()" class="logo" src="../assets/logos/world.png" alt="language">
     </header>
-
+    
+<div class="main-content">
     <div class="popup" id="popup">
         
         <div class="lang-headline">
@@ -87,7 +87,24 @@
         <img class="myPic" src="../assets/image/Ich.png" alt="Bild von mir">
     </div>
 
-    <div class="body-template" id="bodyTemplate"></div>
+    <div class="body-template" id="bodyTemplate">
+        <div class="headline-rating">
+            <h1>Moskau's Küche</h1>
+            <a class="rating" href="https://de.trustpilot.com/">Bewertung (4.8 von 5)</a>
+        </div>
+
+        <div class="dish-catogery">
+            <div class="ctgy-btn">Suppen</div>
+            <div class="ctgy-btn">Vorspeisen</div>
+            <div class="ctgy-btn">Hauptgericht</div>
+            <div class="ctgy-btn">Nachtisch</div>
+            <div class="ctgy-btn">Getränke</div>
+            <div class="ctgy-btn">Extras</div>
+        </div>
+
+        <div id="dishBox" class="dish-box"></div>
+    </div>
+</div>
 
 
 
@@ -99,7 +116,6 @@
         <a data-i18n="footerContact" class="footer-links" href="">Kontakt</a>
     </footer>
 
-</div>
 </body>
 
 
