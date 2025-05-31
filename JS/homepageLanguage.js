@@ -55,7 +55,6 @@ let translations = {
     },
 }
 
-
 function translatePage(lang) { // (parameter) "de" or "en"
     let elements = document.querySelectorAll('[data-i18n]'); // searched all Attributes with data-i18n="..." and saved
 
@@ -66,4 +65,9 @@ function translatePage(lang) { // (parameter) "de" or "en"
             el.innerText = translations[lang][key];
         }
     });
+
+    localStorage.setItem('language', lang);
+    document.getElementById('popup').classList.remove('open-popup');
+
+    saveLocalStorage();
 }
