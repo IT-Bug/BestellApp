@@ -3,30 +3,39 @@
 
 .sidenav {
     height: 100%;
+    max-width: 400px;
     width: 300px;
     position: absolute;
     z-index: 1;
-    top: 1;
     right: 0;
     background: rgba(255, 255, 255, 0.288);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .change-container {
-    background-color: rgba(78, 78, 78, 0.185);
+    background-color: #EFEDEA;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    padding: 8px 100px;
-    margin: 15px;
-    gap: 20px;
+    gap: 3px;
+    width: 270px;
 }
 
 .change-logo-txt-container {
     display: flex;
     gap: 5px;
     text-align: center;
+    padding: 8px;
+}
+
+.change-logo-txt-container:hover {
+    background-color: rgba(128, 128, 128, 0.137);
+    cursor: pointer;
+    border-radius: 30px;
 }
 
 .basket {

@@ -37,6 +37,7 @@ let translations = {
     },
 
     de: {
+        basketHeadline: "Warenkorb",
         langHeadline: "Land",
         UK: "Vereinigtes Königreich",
         DE: "Deutschland",
