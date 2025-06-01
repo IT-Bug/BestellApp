@@ -51,6 +51,7 @@ body {
 
 body::-webkit-scrollbar {
   width: var(--sb-size)
+
 }
 
 body::-webkit-scrollbar-track {
@@ -66,6 +67,34 @@ body::-webkit-scrollbar-thumb {
 
 @supports not selector(::-webkit-scrollbar) {
   body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+.dish-catogery {
+  --sb-track-color: #b9b9b9;
+  --sb-thumb-color: #ff8000;
+  --sb-size: 5px;
+}
+
+.dish-catogery::-webkit-scrollbar {
+  height: var(--sb-size)
+}
+
+.dish-catogery::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+.dish-catogery::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .dish-catogery {
     scrollbar-color: var(--sb-thumb-color)
                      var(--sb-track-color);
   }

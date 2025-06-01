@@ -1,122 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../assets/icon/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../assets/icon/favicon.png" />
     <title>BestellApp</title>
 
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../CSS/default.css">
-    <link rel="stylesheet" href="../CSS/images.css">
-    <link rel="stylesheet" href="../CSS/genrateBtn.css">
-    <link rel="stylesheet" href="../CSS/popup.css">
-    <link rel="stylesheet" href="../CSS/menucard.css">
-    <link rel="stylesheet" href="../CSS/sidenav.css">
-    <link rel="stylesheet" href="../CSS/MQ-menu.css">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../CSS/default.css" />
+    <link rel="stylesheet" href="../CSS/images.css" />
+    <link rel="stylesheet" href="../CSS/genrateBtn.css" />
+    <link rel="stylesheet" href="../CSS/popup.css" />
+    <link rel="stylesheet" href="../CSS/menucard.css" />
+    <link rel="stylesheet" href="../CSS/sidenav.css" />
+    <link rel="stylesheet" href="../CSS/MQ-menu.css" />
     <script src="../JS/homepageLanguage.js"></script>
+  </head>
 
-</head>
-
-
-<body>
-
+  <body>
     <!-- Header Section -->
     <header>
-        <a href="../index.html"><img class="header-logo" src="../assets/logos/BestellAppLogo.png" alt="BestellApp Logo"></a>
-        <img onclick="togglePopup()" class="logo" src="../assets/logos/world.png" alt="language">
+      <a href="../index.html"
+        ><img
+          class="header-logo"
+          src="../assets/logos/BestellAppLogo.png"
+          alt="BestellApp Logo"
+      /></a>
+      <img
+        onclick="togglePopup()"
+        class="logo"
+        src="../assets/logos/world.png"
+        alt="language"
+      />
     </header>
-    
-<div class="main-content">
-    <div class="popup" id="popup">
-        
+
+    <div class="main-content">
+      <div class="popup" id="popup">
         <div class="lang-headline">
-            <b data-i18n="langHeadline">Land</b>
+          <b data-i18n="langHeadline">Land</b>
         </div>
 
         <div class="main-logo-txt-container">
-            <div class="logo-txt-container" onclick="translatePage('en')">
-                <img class="lang-logos" src="../assets/logos/unitedkingdom.png" alt="English"><span data-i18n="UK">Vereinigtes Königreich</span>
-            </div>
-            <div class="logo-txt-container" onclick="translatePage('de')">
-                <img class="lang-logos" src="../assets/logos/german.png"  alt="Deutsch"><span data-i18n="DE">Deutschland</span>
-            </div>
+          <div class="logo-txt-container" onclick="translatePage('en')">
+            <img
+              class="lang-logos"
+              src="../assets/logos/unitedkingdom.png"
+              alt="English"
+            /><span data-i18n="UK">Vereinigtes Königreich</span>
+          </div>
+          <div class="logo-txt-container" onclick="translatePage('de')">
+            <img
+              class="lang-logos"
+              src="../assets/logos/german.png"
+              alt="Deutsch"
+            /><span data-i18n="DE">Deutschland</span>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- Side Nav -->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"></a>
-        <h2 data-i18n="basketHeadline" style="padding: 30px 20px; display: flex; justify-content: center;">Warenkorb</h2>
-        
-        <div class="change-container">
-            <div class="change-logo-txt-container">
-                <div class="icon-basket">
-                    <img class="chg-logos" src="../assets/logos/carblack.png" height="30px" alt="Lieferung icon">
-                </div>
-                <div>
-                    <p data-i18n="basketStep1Titel">Lieferung</p>
-                    <p style="font-size: small;">15-35 min</p>
-                </div>
-            </div>
-            
-            <div class="change-logo-txt-container">
-                <div class="icon-basket">
-                    <img class="chg-logos" src="../assets/logos/handbasketblack.png" height="30px" alt="abholung logo">
-                </div>
-                <div>
-                    <p data-i18n="basketStep2Titel">Abholung</p>
-                    <p style="font-size: small;">15 min</p>
-                </div>
-            </div>
-            
-            
-        </div>
+      <!-- Side Nav -->
 
-        <div id="basket" class="basket">
-            <img src="../assets/logos/basket.png" height="50px" alt="warenkorb logo">
+      <div class="sideNavContainer">
+        <div id="mySidenav" class="sidenav">
+          <a
+            href="javascript:void(0)"
+            class="close-btn"
+            onclick="closeNav()"
+          ></a>
+          <h2
+            data-i18n="basketHeadline"
+            style="padding: 30px 20px; display: flex; justify-content: center"
+          >
+            Warenkorb
+          </h2>
+
+          <div class="change-container">
+            <div class="change-logo-txt-container">
+              <div class="icon-basket">
+                <img
+                  class="chg-logos"
+                  src="../assets/logos/carblack.png"
+                  height="30px"
+                  alt="Lieferung icon"
+                />
+              </div>
+              <div>
+                <p data-i18n="basketStep1Titel">Lieferung</p>
+                <p style="font-size: small">15-35 min</p>
+              </div>
+            </div>
+
+            <div class="change-logo-txt-container">
+              <div class="icon-basket">
+                <img
+                  class="chg-logos"
+                  src="../assets/logos/handbasketblack.png"
+                  height="30px"
+                  alt="abholung logo"
+                />
+              </div>
+              <div>
+                <p data-i18n="basketStep2Titel">Abholung</p>
+                <p style="font-size: small">15 min</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="basket" class="basket">
+            <img
+              src="../assets/logos/basket.png"
+              height="50px"
+              alt="warenkorb logo"
+            />
             <h2>Vergiss nicht dein Warenkorb zu füllen</h2>
-            <p>Suche deine Lieblingsgerichte aus oder probier etwas Neues, pack die Gerichte in dein Warenkorb und bestelle dein Essen. </p>
+            <p>
+              Suche deine Lieblingsgerichte aus oder probier etwas Neues, pack
+              die Gerichte in dein Warenkorb und bestelle dein Essen.
+            </p>
+          </div>
         </div>
-    </div>
+      </div>
+      
+      <!-- Main Section -->
+      <div class="menu-content-container">
+        <div class="menu-content">
+          <img class="myPic" src="../assets/image/Ich.png" alt="Bild von mir" />
+        </div>
 
-    <!-- Main Section -->
-
-    <div class="menu-content">
-        <img class="myPic" src="../assets/image/Ich.png" alt="Bild von mir">
-    </div>
-
-    <div class="body-template" id="bodyTemplate">
-        <div class="headline-rating">
+        <div class="body-template" id="bodyTemplate">
+          <div class="headline-rating">
             <h1>Moskau's Küche</h1>
-            <a class="rating" href="https://de.trustpilot.com/">Bewertung (4.8 von 5)</a>
-        </div>
+            <a class="rating" href="https://de.trustpilot.com/"
+              >Bewertung (4.8 von 5)</a
+            >
+          </div>
 
-        <div class="dish-catogery">
+          <div class="dish-catogery">
             <div class="ctgy-btn">Suppen</div>
             <div class="ctgy-btn">Vorspeisen</div>
             <div class="ctgy-btn">Hauptgericht</div>
             <div class="ctgy-btn">Nachtisch</div>
             <div class="ctgy-btn">Getränke</div>
             <div class="ctgy-btn">Extras</div>
+          </div>
+
+          <div id="dishBox" class="dish-box"></div>
         </div>
-
-        <div id="dishBox" class="dish-box"></div>
+      </div>
     </div>
-</div>
-
-
 
     <!-- Footer Section -->
-    
+
     <footer>
-        <a data-i18n="footerImp" class="footer-links" href="">Impressum</a>
-        <a data-i18n="footerDatstz" class="footer-links" href="">Datenschutz</a>
-        <a data-i18n="footerContact" class="footer-links" href="">Kontakt</a>
+      <a data-i18n="footerImp" class="footer-links" href="">Impressum</a>
+      <a data-i18n="footerDatstz" class="footer-links" href="">Datenschutz</a>
+      <a data-i18n="footerContact" class="footer-links" href="">Kontakt</a>
     </footer>
-
-</body>
-
-
+  </body>
 </html>

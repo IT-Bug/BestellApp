@@ -23,13 +23,13 @@
         <img class="header-logo" src="./assets/logos/BestellAppLogo.png" alt="BestellApp Logo">
         <img onclick="togglePopup()" class="logo" src="./assets/logos/world.png" alt="language">
     </header>
-
+    
     <div class="popup" id="popup">
         
         <div class="lang-headline">
             <b data-i18n="langHeadline">Land</b>
         </div>
-
+        
         <div class="main-logo-txt-container">
             <div class="logo-txt-container" onclick="translatePage('en')">
                 <img class="lang-logos" src="./assets/logos/unitedkingdom.png" alt="English"><span data-i18n="UK">Vereinigtes Königreich</span>
@@ -39,42 +39,48 @@
             </div>
         </div>
     </div>
-
-    <main>
+    
+<div class="main-wrapper">
+    
+    <div class="main">
         <img class="my-img" src="./assets/image/Ich.png" alt="">
 
         <h1 data-i18n="headline">Das Beste Essen in Deiner Nähe!</h1>
         
         <a href="./HTML/menu.html" data-i18n="menuBtn" class="menu-btn">Ab zu den Menüs</a>
-    </main>
+    </div>
 
-    <section>
+    <div class="homepage-content">
+
         <span data-i18n="spanTxt">So bestellt Du</span>
+
         <h1 data-i18n="ctgyHeadline" class="category-headline">SO SCHWER IST ES NICHT.</h1>
+
         <div class="category">
+
             <div>
                 <img class="category-logos" src="./assets/logos/Menükarte.png" alt="KartenMenü Logo">
                 <h3 data-i18n="step1Title">Klicke auf "Ab zu den Menüs"</h3><br>
                 <span data-i18n="step1Text">Wir zeigen Dir alle Menüs die wir da haben. Vielleicht ist für Dich auch was dabei.</span>
             </div>
+
             <div>
                 <img class="category-logos" src="./assets/logos/pizzastück.png" alt="essen Logo">
                 <h3 data-i18n="step2Title">Entscheide, worauf Du bock hast</h3><br>
                 <span data-i18n="step2Text">Worauf wartest Du... Schnell... bevor der Hunger eilt.</span>
             </div>
+
             <div>
                 <img class="category-logos" src="./assets/logos/service.png" alt="service Logo">
                 <h3 data-i18n="step3Title">Bestelle Lieferung oder Abholung</h3><br>
                 <span data-i18n="step3Text">Wir liefern bis zur Tür, kannst aber auch gerne zur Abholung vorbei kommen.</span>
             </div>
+
         </div>
-    </section>
-
-    
-
-    <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.207967591088!2d11.558628376814756!3d48.125512652000275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf44d01affc5%3A0xe7a07e0710be63e8!2sKapuzinerstra%C3%9Fe%2031%2C%2080337%20M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1717167929612!5m2!1sde!2sde" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+</div>    
+
+
 
     <footer>
         <a data-i18n="footerImp" class="footer-links" href="">Impressum</a>
