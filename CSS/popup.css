@@ -1,6 +1,5 @@
 
 .popup {
-    width: 150px;
     background: #fff;
     position: fixed;
     top: 0;
@@ -8,7 +7,7 @@
     text-align: center;
     margin: 5px;
     padding: 20px;
-    width: 200px;
+    width: 280px;
     border-radius: 8px;
     transform: translate(0%, 0%) scale(0.1);
     visibility: hidden;
@@ -26,7 +25,7 @@
 .open-popup {
     opacity: 1;
     visibility: visible;
-    top: 11%;
+    top: 10%;
     transform: translate(0%, -5%) scale(1);
 
 }
