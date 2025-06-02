@@ -6,7 +6,7 @@
 }
 
 .menu-content-container {
-    width: 70%;
+    width: 100%;
 }
 
 .menu-content {
@@ -16,16 +16,27 @@
     background-repeat: no-repeat;  
     background-size: cover;
     padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .myPic {
-    height: 150px;
+    border-radius: 120px;
+    height: 120px;
     position: absolute;
-    top: 41.5%;
-    border-radius: 150px;
+    top: 43%;
+    margin-left: 50px;
 }
 
-.body-template {
+.headline-rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+.body-template { 
     height: 100vh;
 }
 
@@ -44,6 +55,7 @@
 .dish-catogery {
     background-color: rgba(196, 162, 119, 0.377);
     display: flex;
+    justify-content: center;
     gap: 10px;
     width: 100%;
     padding: 5px;

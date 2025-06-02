@@ -33,19 +33,19 @@
 }
 
 @media only screen and (min-width: 700px) {
-  .myPic {
+  /* .myPic {
     left: 20%;
-  }
+  } */
 }
 
 @media only screen and (min-width: 900px) {
-  .myPic {
+  /* .myPic {
     left: 30%;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1400px) {
-  .myPic {
+  /* .myPic {
     left: 40%;
-  }
+  } */
 }
