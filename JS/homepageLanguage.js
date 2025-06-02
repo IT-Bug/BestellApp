@@ -70,6 +70,5 @@ function translatePage(lang) { // (parameter) "de" or "en"
 
     localStorage.setItem('language', lang);
     document.getElementById('popup').classList.remove('open-popup');
-
-    saveLocalStorage();
+    
 }

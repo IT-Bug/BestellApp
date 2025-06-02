@@ -33,7 +33,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .body-template { 
@@ -46,6 +47,7 @@
     width: 250px;
     border-radius: 8px;
     padding: 5px;
+    padding-top: 2px;
 }
 
 .rating {
