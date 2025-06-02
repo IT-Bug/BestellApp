@@ -1,93 +1,127 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./assets/icon/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/icon/favicon.png" />
     <title>BestellApp</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./CSS/default.css">
-    <link rel="stylesheet" href="./CSS/homepage.css">
-    <link rel="stylesheet" href="./CSS/images.css">
-    <link rel="stylesheet" href="./CSS/genrateBtn.css">
-    <link rel="stylesheet" href="./CSS/popup.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./CSS/default.css" />
+    <link rel="stylesheet" href="./CSS/homepage.css" />
+    <link rel="stylesheet" href="./CSS/images.css" />
+    <link rel="stylesheet" href="./CSS/genrateBtn.css" />
+    <link rel="stylesheet" href="./CSS/popup.css" />
+    <link rel="stylesheet" href="./CSS/MQ-menu.css">
     <script src="script.js"></script>
     <script src="./JS/homepageLanguage.js"></script>
-</head>
+  </head>
 
-
-<body>
-
+  <body>
     <header>
-        <img class="header-logo" src="./assets/logos/BestellAppLogo.png" alt="BestellApp Logo">
-        <img onclick="togglePopup()" class="logo" src="./assets/logos/world.png" alt="language">
+      <img
+        class="header-logo"
+        src="./assets/logos/BestellAppLogo.png"
+        alt="BestellApp Logo"
+      />
+      <img
+        onclick="togglePopup()"
+        class="logo"
+        src="./assets/logos/world.png"
+        alt="language"
+      />
     </header>
-    
+
     <div class="popup" id="popup">
-        
-        <div class="lang-headline">
-            <b data-i18n="langHeadline">Land</b>
-        </div>
-        
-        <div class="main-logo-txt-container">
-            <div class="logo-txt-container" onclick="translatePage('en')">
-                <img class="lang-logos" src="./assets/logos/unitedkingdom.png" alt="English"><span data-i18n="UK">Vereinigtes Königreich</span>
-            </div>
-            <div class="logo-txt-container" onclick="translatePage('de')">
-                <img class="lang-logos" src="./assets/logos/german.png"  alt="Deutsch"><span data-i18n="DE">Deutschland</span>
-            </div>
-        </div>
-    </div>
-    
-<div class="main-wrapper">
-    
-    <div class="main">
-        <img class="my-img" src="./assets/image/Ich.png" alt="">
+      <div class="lang-headline">
+        <b data-i18n="langHeadline">Land</b>
+      </div>
 
-        <h1 data-i18n="headline">Das Beste Essen in Deiner Nähe!</h1>
-        
-        <a href="./HTML/menu.html" data-i18n="menuBtn" class="menu-btn">Ab zu den Menüs</a>
+      <div class="main-logo-txt-container">
+        <div class="logo-txt-container" onclick="translatePage('en')">
+          <img
+            class="lang-logos"
+            src="./assets/logos/unitedkingdom.png"
+            alt="English"
+          /><span data-i18n="UK">Vereinigtes Königreich</span>
+        </div>
+        <div class="logo-txt-container" onclick="translatePage('de')">
+          <img
+            class="lang-logos"
+            src="./assets/logos/german.png"
+            alt="Deutsch"
+          /><span data-i18n="DE">Deutschland</span>
+        </div>
+      </div>
     </div>
 
-    <div class="homepage-content">
+    <div class="main-wrapper">
 
-        <span data-i18n="spanTxt">So bestellt Du</span>
+        <section class="img-main">
+          <img class="my-img" src="./assets/image/Ich.png" alt="" />
 
-        <h1 data-i18n="ctgyHeadline" class="category-headline">SO SCHWER IST ES NICHT.</h1>
+          <h1 data-i18n="headline">Das Beste Essen in Deiner Nähe!</h1>
 
-        <div class="category">
+          <a href="./HTML/menu.html" data-i18n="menuBtn" class="menu-btn"
+            >Ab zu den Menüs</a
+          >
+        </section>
 
+        <section class="homepage-content">
+          <span data-i18n="spanTxt">So bestellt Du</span>
+
+          <h1 data-i18n="ctgyHeadline" class="category-headline">
+            SO SCHWER IST ES NICHT.
+          </h1>
+
+          <div class="category">
             <div>
-                <img class="category-logos" src="./assets/logos/Menükarte.png" alt="KartenMenü Logo">
-                <h3 data-i18n="step1Title">Klicke auf "Ab zu den Menüs"</h3><br>
-                <span data-i18n="step1Text">Wir zeigen Dir alle Menüs die wir da haben. Vielleicht ist für Dich auch was dabei.</span>
+              <img
+                class="category-logos"
+                src="./assets/logos/Menükarte.png"
+                alt="KartenMenü Logo"
+              />
+              <h3 data-i18n="step1Title">Klicke auf "Ab zu den Menüs"</h3>
+              <br />
+              <span data-i18n="step1Text"
+                >Wir zeigen Dir alle Menüs die wir da haben. Vielleicht ist für
+                Dich auch was dabei.</span
+              >
             </div>
 
             <div>
-                <img class="category-logos" src="./assets/logos/pizzastück.png" alt="essen Logo">
-                <h3 data-i18n="step2Title">Entscheide, worauf Du bock hast</h3><br>
-                <span data-i18n="step2Text">Worauf wartest Du... Schnell... bevor der Hunger eilt.</span>
+              <img
+                class="category-logos"
+                src="./assets/logos/pizzastück.png"
+                alt="essen Logo"
+              />
+              <h3 data-i18n="step2Title">Entscheide, worauf Du bock hast</h3>
+              <br />
+              <span data-i18n="step2Text"
+                >Worauf wartest Du... Schnell... bevor der Hunger eilt.</span
+              >
             </div>
 
             <div>
-                <img class="category-logos" src="./assets/logos/service.png" alt="service Logo">
-                <h3 data-i18n="step3Title">Bestelle Lieferung oder Abholung</h3><br>
-                <span data-i18n="step3Text">Wir liefern bis zur Tür, kannst aber auch gerne zur Abholung vorbei kommen.</span>
+              <img
+                class="category-logos"
+                src="./assets/logos/service.png"
+                alt="service Logo"
+              />
+              <h3 data-i18n="step3Title">Bestelle Lieferung oder Abholung</h3>
+              <br />
+              <span data-i18n="step3Text"
+                >Wir liefern bis zur Tür, kannst aber auch gerne zur Abholung
+                vorbei kommen.</span
+              >
             </div>
-
-        </div>
+          </div>
+      </div>
     </div>
-</div>    
-
-
 
     <footer>
-        <a data-i18n="footerImp" class="footer-links" href="">Impressum</a>
-        <a data-i18n="footerDatstz" class="footer-links" href="">Datenschutz</a>
-        <a data-i18n="footerContact" class="footer-links" href="">Kontakt</a>
+      <a data-i18n="footerImp" class="footer-links" href="">Impressum</a>
+      <a data-i18n="footerDatstz" class="footer-links" href="">Datenschutz</a>
+      <a data-i18n="footerContact" class="footer-links" href="">Kontakt</a>
     </footer>
-
-</body>
-
+  </body>
 </html>
