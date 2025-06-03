@@ -1,8 +1,9 @@
 
 let dishes = [
     {
-        headline: "Suppen",
-        imgDish: "",
+        headline: "Beste Wahl",
+        imgDish: "../assets/image/pilmeni.jpg",
+        backgroundImg: true,
         name: "Hausgemachte Pilmeni",
         price: 12.99,
         description: "Teigtaschen mit auswählbarer Füllung (Rindfleisch, Pute oder Schweinefleisch)",
@@ -10,6 +11,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Borsch",
         price: 7.50,
         description: "Suppe Russischer Art mit Rindfleisch, Kraut, Rote Bete, KArotte, Kartoffel",
@@ -17,6 +19,7 @@ let dishes = [
     {
         headline: "Vorspeisen und Salate",
         imgDish: "",
+        backgroundImg: true,
         name: "Gefüllte Blenie",
         price: 7.90,
         description: "3 Blenie gefüllt mit Hackfleisch",
@@ -24,6 +27,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Belochka",
         price:5.00,
         description: "Käse, Knoblauch, Mayonnaise",
@@ -31,6 +35,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Koblauch-Karottensalat",
         price: 5.00,
         description: "Karotten, Mayonnaise, Knoblauch",
@@ -38,6 +43,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: 'Zagadka ("Rätsel")',
         price: 5.00,
         description: "Rindfleisch, Knoblauch, Ei",
@@ -45,6 +51,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Knobi-Salatmixteller",
         price: 6.90,
         description: "Probierteller bestehend aus 3ver. Salaten: Belochka, Zagadka und Knoblauch-Karottensalat",
@@ -52,6 +59,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "KArottensalat Koreanischer Art",
         price: 5.00,
         description: "Karotten, Zwiebel, Essig",
@@ -59,6 +67,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Oliviesalat",
         price: 5.00,
         description: "Kartoffel, Wurst, eingelegte Gurke, Ei, Erbsen",
@@ -66,6 +75,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Vinigret",
         price: 5.00,
         description: "Kartoffel, rote Bete, eingelegtes Kraut, Erbsen",
@@ -73,6 +83,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Russischer Salatmixteller",
         price: 6.90,
         description: "Probierteller bestehend aus 3 ver. Salaten: Oliviesalat, Vinigret und Karottensalat nach Koreanischer Art",
@@ -80,6 +91,7 @@ let dishes = [
     {
         headline: "Hauptgerichte",
         imgDish: "",
+        backgroundImg: true,
         name: "Schaschlik vom Kohlegrill",
         price: 16.90,
         description: "deutsches Schweinefleisch vom Metzger, gegrillte 2 spieße mit Beilage und Beilagensalat",
@@ -87,6 +99,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Geflügelschaschlik",
         price: 16.90,
         description: "Geflügel gegrillte 2 Spieße mit Beilagen",
@@ -94,6 +107,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Plov zubereitet auf Feuer",
         price: 15.90,
         description: "Lammfleisch geschmort mit Reis",
@@ -101,6 +115,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Hausgemachte Wareniki",
         price: 12.90,
         description: "Teigtaschen mit Kartoffel- oder Quarkfüllung Serviert mit Schmand",
@@ -108,6 +123,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Hausgemachte Manti",
         price: 16.90,
         description: "Wassergedampfte Teigtaschen mit Schweine- und- oder Rindfleischfüllung",
@@ -115,6 +131,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Hausgemachte Tschebureki 2 Stk.",
         price: 7.90,
         description: "Frittierte Teigtaschen mit Schweine- und- oder Rindfleischfüllung/ Käsefüllung",
@@ -122,6 +139,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Hausgemachter Rindsgulasch",
         price: 12.90,
         description: "gekochte Nudeln mit Rindfleisch gegart mit Soße",
@@ -129,6 +147,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Schnitzel",
         price: 11.90,
         description: "Putenschnitzel mit Beilagen",
@@ -136,6 +155,7 @@ let dishes = [
     {
         headline: "Nachtisch",
         imgDish: "",
+        backgroundImg: true,
         name: "Bisquitkuchen",
         price: 5.00,
         description: "",
@@ -143,6 +163,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Klosterhütte",
         price: 5.00,
         description: "",
@@ -150,6 +171,7 @@ let dishes = [
     {
         headline: "Heiße Getränke",
         imgDish: "",
+        backgroundImg: true,
         name: "Cay",
         price: 1.90,
         description: "Hausgemachter Schwarzer Tee 100ml",
@@ -157,6 +179,7 @@ let dishes = [
     {
         headline: "",
         imgDish: "",
+        backgroundImg: false,
         name: "Cappuccino",
         price: 1.90,
         description: "Kaffe mit aufgeschäumter Milch 100ml",
@@ -164,6 +187,7 @@ let dishes = [
     {
         headline: "Kalte Getränke",
         imgDish: "",
+        backgroundImg: true,
         name: "Erfrischungsgetränke",
         price: 1.90,
         description: "Cola, Sprite, Fanta 250ml",
