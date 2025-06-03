@@ -1,5 +1,5 @@
 
-let soups = [
+let dishes = [
     {
         headline: "Suppen",
         imgDish: "",
