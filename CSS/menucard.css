@@ -29,7 +29,7 @@
     margin-left: 50px;
 }
 
-.headline-rating-container {
+.info-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,6 +48,18 @@
     border-radius: 8px;
     padding: 5px;
     padding-top: 2px;
+}
+
+.adress-box {
+    margin: 50px 15px;
+    background-color: rgba(196, 162, 119, 0.377);
+    width: 250px;
+    border-radius: 8px;
+    padding: 5px;
+    padding-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .rating {
