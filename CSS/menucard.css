@@ -31,7 +31,6 @@
 
 .info-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding-right: 15px;
     padding-left: 15px;
@@ -42,8 +41,9 @@
 }
 
 .headline-rating {
+    border: 2px solid;
     margin: 50px 15px;
-    background-color: rgba(196, 162, 119, 0.377);
+    background-color: antiquewhite;
     width: 250px;
     border-radius: 8px;
     padding: 5px;
@@ -51,8 +51,9 @@
 }
 
 .adress-box {
+    border: 2px solid;
     margin: 50px 15px;
-    background-color: rgba(196, 162, 119, 0.377);
+    background-color: antiquewhite;
     width: 250px;
     border-radius: 8px;
     padding: 5px;
@@ -66,35 +67,47 @@
     color: green;
 }
 
+.ctgy-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .dish-catogery {
-    background-color: rgba(196, 162, 119, 0.377);
+    border: 2px solid;
+    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     gap: 10px;
-    width: 100%;
+    width: 98%;
     padding: 5px;
     border-radius: 20px;
     overflow-x: auto;
+    font-weight: bold;
 }
 
 .ctgy-btn {
     border-radius: 20px;
-
-    padding: 5px 8px;
+    padding: 10px 8px;
     cursor: pointer;
 }
 
 .ctgy-btn:hover {
     background-color: rgba(82, 82, 82, 0.178);
+    color: orange;
 }
 
 .dishes-container {
     display: flex;
     flex-direction: column;
+    border: 2px solid;
+    background-color: antiquewhite;
+    border-radius: 8px;
+    margin: 20px;
 }
 
 .dish-box {
     padding: 20px;
     height: 100px;
-    
+    text-align: center;
 }

@@ -1,9 +1,26 @@
 
+let currentDishesIndex = 0;
+
 function init(){
-    renderContent();
+    renderImage();
+    renderHeadline();
+    // renderContent();
+}
+
+function renderImage(){
+    let dishImageRef = document.getElementById('imageDishBox');
+    dishImageRef.innerHTML = "";
+    dishImageRef.innerHTML = getImageTemplate(currentDishesIndex);
+}
+
+function renderHeadline(){
+    let dishHeadlineRef = document.getElementById('headlineDishBox');
+    dishHeadlineRef.innerHTML = "";
+    dishHeadlineRef.innerHTML = getHeadlineTemplate(currentDishesIndex);
 }
 
 function renderContent() {
-    let dishBoxRef = document.getElementById('dishBox');
-    dishBoxRef.innerHTML += getTemplateMenu();
+    let dishContentRef = document.getElementById('dishBox');
+    dishContentRef.innerHTML = "";
+    dishContentRef.innerHTML = getTemplateMenu(currentDishesIndex);
 }
