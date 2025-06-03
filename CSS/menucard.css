@@ -87,3 +87,14 @@
 .ctgy-btn:hover {
     background-color: rgba(82, 82, 82, 0.178);
 }
+
+.dishes-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dish-box {
+    padding: 20px;
+    height: 100px;
+    
+}
