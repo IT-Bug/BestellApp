@@ -17,10 +17,19 @@ document.addEventListener('click', function (event) {
 
 let translations = {
     en: {
+
+    // Menu transaltion
+
         basketHeadline: "Shopping cart",
         langHeadline: "Country",
+
+    // Popup translation
+
         UK: "United Kingdom",
         DE: "Germany",
+        
+    // Homepage translation 
+        
         headline: "The best food near you!",
         menuBtn: "To the menus",
         spanTxt: "How to order",
@@ -31,16 +40,28 @@ let translations = {
         step2Text: "What are you waiting for... Hurry... before the hunger hits.",
         step3Title: "Order delivery or pickup",
         step3Text: "We deliver to your door, or you’re welcome to come pick it up.",
+        
+    // Footer translation
+        
         footerImp: "Imprint",
         footerDatstz: "Privacy Policy",
         footerContact: "Contact"
     },
 
     de: {
+
+    // Menu translaton
+
         basketHeadline: "Warenkorb",
         langHeadline: "Land",
+        
+    // Popup translation
+
         UK: "Vereinigtes Königreich",
         DE: "Deutschland",
+       
+    // Homepage translation    
+
         headline: "Das Beste Essen in Deiner Nähe!",
         menuBtn: "Ab zu den Menüs",
         spanTxt: "So bestellst Du",
@@ -51,6 +72,9 @@ let translations = {
         step2Text: "Worauf wartest Du... Schnell... bevor der Hunger eilt.",
         step3Title: "Bestelle Lieferung oder Abholung",
         step3Text: "Wir liefern bis zur Tür, kannst aber auch gerne zur Abholung vorbei kommen.",
+        
+    // Footer translation
+        
         footerImp: "Impressum",
         footerDatstz: "Datenschutz",
         footerContact: "Kontakt"
