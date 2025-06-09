@@ -1,3 +1,4 @@
+// <!-- From Uiverse.io by JasonMep --> Button
 
 
 function getImageTemplate(i){
@@ -23,11 +24,12 @@ function getHeadlineTemplate(i){
 
 function getDishInfoBoxTemplate(i){
     let dishInfo = dishes[i];
-
+    
     return `
         <div class="name-btn-container">
             <h3>${dishInfo.name}</h3>
-            <button>+</button>
+            <button class="gen-button">✛</button>
+
         </div>
 
         <div class="desc-price-container">
