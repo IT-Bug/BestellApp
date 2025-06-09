@@ -27,7 +27,7 @@ function getDishInfoBoxTemplate(i){
     
     return `
         <div class="name-btn-container">
-            <h3>${dishInfo.name}</h3>
+            <h3 class="headline-dish-info-box">${dishInfo.name}</h3>
             <button class="gen-button">✛</button>
 
         </div>
