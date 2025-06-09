@@ -29,5 +29,11 @@ function getDishInfoBoxTemplate(i){
             <h3>${dishInfo.name}</h3>
             <button>+</button>
         </div>
+
+        <div class="desc-price-container">
+            <p class="p-style-dishBoxes">${dishInfo.description}</p>
+            <h3>${dishInfo.price} €</h3>
+        </div>
+
     `
 }
