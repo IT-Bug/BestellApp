@@ -17,10 +17,17 @@ function getHeadlineTemplate(i){
     let headlineDish = dishes[i];
 
     return `
-        <h2>${headlineDish.headline}</h2>
+        <h2 class="headline-style" >${headlineDish.headline}</h2>
     `
 }
 
-function getTemplateMenu(){
+function getDishInfoBoxTemplate(i){
+    let dishInfo = dishes[i];
 
+    return `
+        <div class="name-btn-container">
+            <h3>${dishInfo.name}</h3>
+            <button>+</button>
+        </div>
+    `
 }

@@ -4,7 +4,7 @@ let currentDishesIndex = 0;
 function init(){
     renderImage();
     renderHeadline();
-    // renderContent();
+    renderInfoBox();
 }
 
 function renderImage(){
@@ -19,8 +19,8 @@ function renderHeadline(){
     dishHeadlineRef.innerHTML = getHeadlineTemplate(currentDishesIndex);
 }
 
-function renderContent() {
-    let dishContentRef = document.getElementById('dishBox');
-    dishContentRef.innerHTML = "";
-    dishContentRef.innerHTML = getTemplateMenu(currentDishesIndex);
+function renderInfoBox(){
+    let dishInfoBoxRef = document.getElementById('descriptionContent');
+    dishInfoBoxRef.innerHTML = "";
+    dishInfoBoxRef.innerHTML = getDishInfoBoxTemplate(currentDishesIndex);
 }
