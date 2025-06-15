@@ -1,41 +1,43 @@
 // <!-- From Uiverse.io by JasonMep --> Button
 
+function getDishBoxTemplate(dish) {
+  let dishesMenu = "";
 
-function getImageTemplate(i){
-    let imageDish = dishes[i];
-    let imageBackground = document.getElementById('imageDishBox'); 
+    // Dish Image and Headline
 
-    if (!imageDish.backgroundImg == true) {
-        imageBackground.classList.add('display-none')
+    if (dish.backgroundImg) {
+      
+        dishesMenu += `
+            <div id="imageDishBox">
+                <img class="image-size-dishbox" src="${dish.imgDish}" alt="Das Gericht als Bild">
+            </div>
+            <div id="headlineDishBox">
+                <h2 class="headline-style" >${dish.headline}</h2>
+            </div>
+            <div class="x-stripe-container">
+                <div class="horizontal-strip"></div>
+            </div>
+
+            `;
     }
 
-    return `
-        <img class="image-size-dishbox" src="${imageDish.imgDish}" alt="Das Gericht als Bild">
-    `
-}
+    // Name of Dish and the Description
 
-function getHeadlineTemplate(i){
-    let headlineDish = dishes[i];
+    dishesMenu += `
 
-    return `
-        <h2 class="headline-style" >${headlineDish.headline}</h2>
-    `
-}
-
-function getDishInfoBoxTemplate(i){
-    let dishInfo = dishes[i];
-    
-    return `
         <div class="name-btn-container">
-            <h3 class="headline-dish-info-box">${dishInfo.name}</h3>
+            <h3 class="headline-dish-info-box">${dish.name}</h3>
             <button class="gen-button">✛</button>
-
         </div>
-
-        <div class="desc-price-container">
-            <p class="p-style-dishBoxes">${dishInfo.description}</p>
-            <h3>${dishInfo.price} €</h3>
+        
+        <div class="discription-container">
+            <div class="desc-price-container">
+                <p class="p-style-dishBoxes">${dish.description}</p>
+                <h3>${dish.price.toFixed(2)} €</h3>
+            </div>
         </div>
+        `;
+        
+        return dishesMenu;
+  }
 
-    `
-}

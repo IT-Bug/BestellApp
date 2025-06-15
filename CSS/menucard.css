@@ -150,17 +150,18 @@
     font-size: 23px;
 }
 
-.discription-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 100%;
-}
-
 .name-btn-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px;
+}
+
+.discription-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 100%;
 }
 
 .desc-price-container {

@@ -1,26 +1,20 @@
-
-let currentDishesIndex = 0;
-
-function init(){
-    renderImage();
-    renderHeadline();
-    renderInfoBox();
+function init() {
+//   renderDishBoxes();
+  renderDishBoxContent();
 }
 
-function renderImage(){
-    let dishImageRef = document.getElementById('imageDishBox');
-    dishImageRef.innerHTML = "";
-    dishImageRef.innerHTML = getImageTemplate(currentDishesIndex);
-}
+function renderDishBoxContent() {
+  let dishContainer = document.getElementById("dishBox");
+  dishContainer.innerHTML = "";
 
-function renderHeadline(){
-    let dishHeadlineRef = document.getElementById('headlineDishBox');
-    dishHeadlineRef.innerHTML = "";
-    dishHeadlineRef.innerHTML = getHeadlineTemplate(currentDishesIndex);
-}
+  for (let i = 0; i < dishes.length; i++) {
+    let dish = dishes[i];
 
-function renderInfoBox(){
-    let dishInfoBoxRef = document.getElementById('descriptionContent');
-    dishInfoBoxRef.innerHTML = "";
-    dishInfoBoxRef.innerHTML = getDishInfoBoxTemplate(currentDishesIndex);
+    dishContainer.innerHTML += `
+        <div class="dishBox">
+            ${getDishBoxTemplate(dish)}
+        </div>
+                
+    `;
+  }
 }
