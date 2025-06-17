@@ -8,6 +8,8 @@ function getDishBoxTemplate(dish) {
     if (dish.backgroundImg) {
       
         dishesMenu += `
+        <div class="dishes-container">
+        <div class="dish-box">
             <div id="imageDishBox">
                 <img class="image-size-dishbox" src="${dish.imgDish}" alt="Das Gericht als Bild">
             </div>
@@ -17,13 +19,6 @@ function getDishBoxTemplate(dish) {
             <div class="x-stripe-container">
                 <div class="horizontal-strip"></div>
             </div>
-
-            `;
-    }
-
-    // Name of Dish and the Description
-
-    dishesMenu += `
 
         <div class="name-btn-container">
             <h3 class="headline-dish-info-box">${dish.name}</h3>
@@ -35,9 +30,14 @@ function getDishBoxTemplate(dish) {
                 <p class="p-style-dishBoxes">${dish.description}</p>
                 <h3>${dish.price.toFixed(2)} €</h3>
             </div>
+            </div>
+        </div>
         </div>
         `;
         
         return dishesMenu;
   }
 
+}
+
+// undefined escalation

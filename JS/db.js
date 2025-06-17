@@ -16,7 +16,7 @@ let dishes = [
         backgroundImg: false,
         name: "Borsch",
         price: 7.50,
-        description: "Suppe Russischer Art mit Rindfleisch, Kraut, Rote Bete, KArotte, Kartoffel",
+        description: "Suppe Russischer Art mit Rindfleisch, Kraut, Rote Bete, Karotte, Kartoffel",
     },
     {
         id: 3,
