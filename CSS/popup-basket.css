@@ -1,8 +1,40 @@
 
+#popUpBasket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .popUpBasket {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    bottom: 100px;
     background-color: aqua;
-    height: 51px;
-    width: 50px;
+    height: 70%;
+    width: 90%;
+    border-radius: 8px;
+    padding: 50px;
+}
+/* Basket Button MQ */
+
+.basket-btn-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+}
+
+.basket-button {
+    background-color: #FF8000;
+    border-radius: 200px;
+    color: #EFEDEA;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
 }
