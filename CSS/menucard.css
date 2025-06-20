@@ -14,7 +14,6 @@
     background-position: center;
     background-repeat: no-repeat;  
     background-size: cover;
-    padding-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -24,15 +23,12 @@
     border-radius: 120px;
     height: 120px;
     position: absolute;
-    top: 43%;
-    margin-left: 80px;
+    top: 45%;
 }
 
 .info-container {
     display: flex;
     justify-content: space-between;
-    padding-right: 15px;
-    padding-left: 15px;
 }
 
 .headline-rating {
@@ -69,7 +65,7 @@
 }
 
 .scrollbar-wrapper {
-    width: 90%; 
+    width: 98%; 
     margin: 0 auto;
     overflow-x: auto;
     border-radius: 20px;
