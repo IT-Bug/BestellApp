@@ -44,4 +44,8 @@
   .basket-btn-container {
     display: none !important;
   }
+
+  .popUpBasket{
+    display: none !important;
+  }
 }

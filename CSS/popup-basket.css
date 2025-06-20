@@ -8,11 +8,12 @@
 .popUpBasket {
     position: fixed;
     bottom: 100px;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     height: 70%;
-    width: 90%;
+    width: 70%;
     border-radius: 8px;
     padding: 50px;
+    filter: drop-shadow(1px 2px 10px #000000);
 }
 /* Basket Button MQ */
 
@@ -36,5 +37,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.basket-button:hover {
     cursor: pointer;
+    filter: drop-shadow(1px 2px 10px #000000);
 }
