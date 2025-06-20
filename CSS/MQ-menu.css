@@ -28,11 +28,15 @@
   }
 }
 
-@media only screen and (max-width: 1055px) {
+@media only screen and (max-width: 400px) {
   .change-container {
     flex-direction: column;
     width: 130px;
     gap: 0px;
+  }
+
+  .basket {
+    overflow-y: hidden;
   }
 }
 
