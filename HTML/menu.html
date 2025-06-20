@@ -80,7 +80,7 @@
             Warenkorb
           </h2>
 
-          <div class="change-container">
+          <div class="change-container toggle-option" id="pickupOption" onclick="toggleBasketOption('deliveryOption')">
             <div class="change-logo-txt-container">
               <div class="icon-basket">
                 <img
@@ -96,7 +96,7 @@
               </div>
             </div>
 
-            <div class="change-logo-txt-container">
+            <div class="change-logo-txt-container toggle-option" id="pickupOption" onclick="toggleBasketOption('pickup')">
               <div class="icon-basket">
                 <img
                   class="chg-logos"
@@ -175,12 +175,10 @@
           <div class="scrollbar-wrapper">
             <div class="ctgy-container">
               <div class="dish-catogery">
-                <div class="ctgy-btn">Suppen</div>
                 <div class="ctgy-btn">Vorspeisen</div>
                 <div class="ctgy-btn">Hauptgericht</div>
                 <div class="ctgy-btn">Nachtisch</div>
                 <div class="ctgy-btn">Getränke</div>
-                <div class="ctgy-btn">Extras</div>
               </div>
             </div>
           </div>
@@ -189,6 +187,9 @@
             <div id="dishBox">
               <div id="dishBoxContent"></div>
             </div>
+          </div>
+          <div class="basket-btn-container">
+            <div class="basket-button">Warenkorb ansehen</div>
           </div>
         </div>
       </div>

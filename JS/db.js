@@ -21,7 +21,7 @@ let dishes = [
     {
         id: 3,
         headline: "Vorspeisen und Salate",
-        imgDish: "",
+        imgDish: "../assets/image/vorspeise.jpg",
         backgroundImg: true,
         name: "Gefüllte Blenie",
         price: 7.90,
@@ -68,7 +68,7 @@ let dishes = [
         headline: "",
         imgDish: "",
         backgroundImg: false,
-        name: "KArottensalat Koreanischer Art",
+        name: "Karottensalat Koreanischer Art",
         price: 5.00,
         description: "Karotten, Zwiebel, Essig",
     },
@@ -102,7 +102,7 @@ let dishes = [
     {
         id: 12,
         headline: "Hauptgerichte",
-        imgDish: "",
+        imgDish: "../assets/image/shashlick.jpg",
         backgroundImg: true,
         name: "Schaschlik vom Kohlegrill",
         price: 16.90,
@@ -174,7 +174,7 @@ let dishes = [
     {
         id: 20,
         headline: "Nachtisch",
-        imgDish: "",
+        imgDish: "../assets/image/nachtisch.jpg",
         backgroundImg: true,
         name: "Bisquitkuchen",
         price: 5.00,
@@ -192,7 +192,7 @@ let dishes = [
     {
         id: 22,
         headline: "Heiße Getränke",
-        imgDish: "",
+        imgDish: "../assets/image/hotDrinks.png",
         backgroundImg: true,
         name: "Cay",
         price: 1.90,
@@ -210,7 +210,7 @@ let dishes = [
     {
         id: 24,
         headline: "Kalte Getränke",
-        imgDish: "",
+        imgDish: "../assets/image/colddrinks.png",
         backgroundImg: true,
         name: "Erfrischungsgetränke",
         price: 1.90,
