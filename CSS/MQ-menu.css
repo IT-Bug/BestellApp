@@ -1,6 +1,6 @@
 
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1060px) {
   .sidenav {
     width: 290px;
     display: none;
@@ -39,5 +39,9 @@
 @media only screen and (min-width: 900px) {
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1060px) {
+  
+  .basket-btn-container {
+    display: none !important;
+  }
 }

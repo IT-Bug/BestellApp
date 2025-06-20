@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="../CSS/default.css" />
     <link rel="stylesheet" href="../CSS/images.css" />
     <link rel="stylesheet" href="../CSS/genrateBtn.css" />
-    <link rel="stylesheet" href="../CSS/popup.css" />
+    <link rel="stylesheet" href="../CSS/popup-language.css" />
     <link rel="stylesheet" href="../CSS/menucard.css" />
     <link rel="stylesheet" href="../CSS/sidenav.css" />
     <link rel="stylesheet" href="../CSS/MQ-menu.css" />
     <link rel="stylesheet" href="../CSS/hamster.css" />
+    <link rel="stylesheet" href="../CSS/popup-basket.css">
     <script src="../JS/Language.js"></script>
     <script src="../JS/db.js"></script>
     <script src="../script.js"></script>
     <script src="../JS/template.js"></script>
+    <script src="../JS/mobileBasket.js"></script>
   </head>
 
   <body onload="init()">
@@ -188,8 +190,9 @@
               <div id="dishBoxContent"></div>
             </div>
           </div>
+          <div id="popUpBasket"></div>
           <div class="basket-btn-container">
-            <div class="basket-button">Warenkorb ansehen</div>
+            <div onclick="openBasketPopUp()" class="basket-button">Warenkorb ansehen</div>
           </div>
         </div>
       </div>

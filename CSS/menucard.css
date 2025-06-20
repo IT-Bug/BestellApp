@@ -98,13 +98,19 @@
 
 /* Dishbox */
 
+#dishBoxContent {
+    margin: 15px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .dishes-container {
     display: flex;
     flex-direction: column;
     border: 2px solid;
     background-color: antiquewhite;
     border-radius: 15px;
-    margin: 20px 6px;
 }
 
 
