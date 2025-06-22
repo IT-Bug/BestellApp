@@ -18,10 +18,17 @@ function renderDishBoxContent() {
   }
 }
 
-
-function addDishesBasket() {
-  let hideInfoBasket = document.getElementById('hideInfoaddDishes');
+function addDishesBasket(dishId) {
+  let hideInfoBasket = document.getElementById("hideInfoaddDishes");
   if (hideInfoBasket) {
-    hideInfoBasket.classList.add('display-none');
+    let dish = dishes.find(d => d.id === dishId)
+    
+    if (dish) {
+      hideInfoBasket.innerHTML = `
+        <div>
+          ${addDishesBasketTemplate(dish)}
+        </div>
+      `;
+    }
   }
 }

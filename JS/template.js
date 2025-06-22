@@ -1,5 +1,7 @@
 // <!-- From Uiverse.io by JasonMep --> Button
 
+let basket = [];
+
 function getDishBoxTemplate(dish) {
   let dishesMenu = "";
 
@@ -19,7 +21,7 @@ function getDishBoxTemplate(dish) {
           </div>
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket()" class="gen-button">✛</button>
+              <button onclick="addDishesBasket(${dish.id})" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
@@ -36,7 +38,7 @@ function getDishBoxTemplate(dish) {
       <div class="dish-box">
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket()" class="gen-button">✛</button>
+              <button onclick="addDishesBasket(${dish.id})" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
@@ -49,4 +51,30 @@ function getDishBoxTemplate(dish) {
       `;
   }
   return dishesMenu;
+}
+
+function addDishesBasketTemplate(dish){
+    let addDishBasket = "";
+
+    addDishBasket = `
+    
+    <div class="sidenav-info">
+        <div class="dishes-container">
+          <div class="dish-box">
+            <div class="name-btn-container">
+              <h3 class="headline-dish-info-box">${dish.name}</h3>
+            </div>
+            
+            <div class="discription-container">
+              <div>
+                <h3>${dish.price.toFixed(2)} €</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    `;
+
+    return addDishBasket;
 }
