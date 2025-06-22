@@ -17,3 +17,11 @@ function renderDishBoxContent() {
     `;
   }
 }
+
+
+function addDishesBasket() {
+  let hideInfoBasket = document.getElementById('hideInfoaddDishes');
+  if (hideInfoBasket) {
+    hideInfoBasket.classList.add('display-none');
+  }
+}

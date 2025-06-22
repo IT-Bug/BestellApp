@@ -7,6 +7,9 @@ function openBasketPopUp(){
 
     popUpBasketRef.innerHTML= `
         <div class="popUpBasket">
+          <h2 data-i18n="basketHeadline" style="padding: 30px 20px; display: flex; justify-content: center">
+            Warenkorb
+          </h2>
           <div class="change-container">
             <div class="change-logo-txt-container">
               <div class="icon-basket">

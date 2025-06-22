@@ -40,7 +40,7 @@
       />
     </header>
 
-    <!-- Main Section -->
+    <!-- PopUp Languages -->
 
     <div class="main-content">
       <div class="popup" id="popup">
@@ -70,42 +70,23 @@
 
       <div class="sideNavContainer">
         <div id="mySidenav" class="sidenav">
-          <a
-            href="javascript:void(0)"
-            class="close-btn"
-            onclick="closeNav()"
-          ></a>
-          <h2
-            data-i18n="basketHeadline"
-            style="padding: 30px 20px; display: flex; justify-content: center"
-          >
+          <h2 data-i18n="basketHeadline" style="padding: 30px 20px; display: flex; justify-content: center">
             Warenkorb
           </h2>
-
           <div class="change-container toggle-option" id="pickupOption" onclick="toggleBasketOption('deliveryOption')">
             <div class="change-logo-txt-container">
               <div class="icon-basket">
-                <img
-                  class="chg-logos"
-                  src="../assets/logos/carblack.png"
-                  height="30px"
-                  alt="Lieferung icon"
-                />
+                <img class="chg-logos" src="../assets/logos/carblack.png" height="30px" alt="Lieferung icon"/>
               </div>
               <div>
                 <p data-i18n="basketStep1Titel">Lieferung</p>
                 <p style="font-size: small">15-35 min</p>
               </div>
             </div>
-
+            
             <div class="change-logo-txt-container toggle-option" id="pickupOption" onclick="toggleBasketOption('pickup')">
               <div class="icon-basket">
-                <img
-                  class="chg-logos"
-                  src="../assets/logos/handbasketblack.png"
-                  height="30px"
-                  alt="abholung logo"
-                />
+                <img class="chg-logos"src="../assets/logos/handbasketblack.png" height="30px" alt="abholung logo"/>
               </div>
               <div>
                 <p data-i18n="basketStep2Titel">Abholung</p>
@@ -113,7 +94,8 @@
               </div>
             </div>
           </div>
-
+          
+          <div id="hideInfoaddDishes" class="sidenav-info">
           <div id="basket" class="basket">
             <img src="../assets/logos/basket.png" height="50px" alt="warenkorb logo"/>
             <h2>Vergiss nicht dein Warenkorb zu füllen</h2>
@@ -147,8 +129,11 @@
             </div>
             <div class="spoke"></div>
           </div>
+          </div>
         </div>
       </div>
+
+      <!-- Menu Content -->
 
       <div class="menu-content-container">
         <div class="menu-content">
@@ -158,9 +143,7 @@
         <div class="info-container">
           <div class="headline-rating">
             <h1>Moskau's Küche</h1>
-            <a class="rating" href="https://de.trustpilot.com/"
-              >Bewertung (4.8 von 5) ⭐</a
-            >
+            <a class="rating" href="https://de.trustpilot.com/">Bewertung (4.8 von 5) ⭐</a>
           </div>
           <div class="adress-box">
             <h1 style="font-size: large">Adresse</h1>
@@ -180,6 +163,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Dishes Menus and Basket -->
 
           <div id="dishesContainer">
             <div id="dishBox">

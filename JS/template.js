@@ -19,7 +19,7 @@ function getDishBoxTemplate(dish) {
           </div>
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button class="gen-button">✛</button>
+              <button onclick="addDishesBasket()" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
@@ -36,7 +36,7 @@ function getDishBoxTemplate(dish) {
       <div class="dish-box">
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button class="gen-button">✛</button>
+              <button onclick="addDishesBasket()" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
