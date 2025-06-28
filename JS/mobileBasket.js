@@ -13,12 +13,7 @@ function openBasketPopUp(){
           <div class="change-container">
             <div class="change-logo-txt-container">
               <div class="icon-basket">
-                <img
-                  class="chg-logos"
-                  src="../assets/logos/carblack.png"
-                  height="30px"
-                  alt="Lieferung icon"
-                />
+                <img class="chg-logos" src="../assets/logos/carblack.png" height="30px" alt="Lieferung icon"/>
               </div>
               <div>
                 <p data-i18n="basketStep1Titel">Lieferung</p>
@@ -28,12 +23,7 @@ function openBasketPopUp(){
 
             <div class="change-logo-txt-container">
               <div class="icon-basket">
-                <img
-                  class="chg-logos"
-                  src="../assets/logos/handbasketblack.png"
-                  height="30px"
-                  alt="abholung logo"
-                />
+                <img class="chg-logos" src="../assets/logos/handbasketblack.png" height="30px" alt="abholung logo"/>
               </div>
               <div>
                 <p data-i18n="basketStep2Titel">Abholung</p>

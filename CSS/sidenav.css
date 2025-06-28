@@ -1,4 +1,3 @@
-
 /* This side Basket menu */
 
 .sideNavContainer {
@@ -27,8 +26,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    gap: 3px;
-    width: 270px;
+    
 }
 
 .change-logo-txt-container {
@@ -60,26 +58,55 @@
     text-align: center;
 }
 
-.dishes-container-basket {
-    background-color: rgba(105, 105, 105, 0.13);    
-    border-radius: 8px;
+.headline-dish-basket {    
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-size: 10px;
     gap: 20px;
 }
 
+.discription-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
 .dish-box-basket {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
 }
 
 .dish-price-add-container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.164);
+    border-radius: 20px;
 }
-/* 
-.dish-btn-style {
 
-} */
+.add-btn-basket {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
 
+.add-btn-basket:hover {
+    color: #ffa600;
+    background: rgba(255,128,0,0.08);
+    border-radius: 20px;
+    transition: ease-in 0.2s;
+}
+
+.extra-info {
+    text-decoration: underline;
+    cursor: pointer;
+}

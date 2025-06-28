@@ -154,13 +154,6 @@
     padding: 8px;
 }
 
-.discription-container {
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    width: 100%;
-}
-
 .desc-price-container {
     display: flex;
     flex-direction: column;
