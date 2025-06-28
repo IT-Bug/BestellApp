@@ -32,3 +32,14 @@ function addDishesBasket(dishId) {
     }
   }
 }
+
+function deleteDishFromBasket() {
+  let hideInfoBasket = document.getElementById('hideInfoaddDishes');
+
+  if (hideInfoBasket) {
+    hideInfoBasket.innerHTML = `
+    <div>
+      ${deletedBasketHTML()}
+    </div>
+  `;}
+}

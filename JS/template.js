@@ -75,7 +75,7 @@ function addDishesBasketTemplate(dish) {
             <div class="discription-container">
               <div class="dish-price-add-container">
 
-                <button aria-label="Delete item" class="delete-button">
+                <button onclick="deleteDishFromBasket()" aria-label="Delete item" class="delete-button">
                     <svg class="trash-svg" viewBox="0 -10 64 74" xmlns="http://www.w3.org/2000/svg">
                         <g id="trash-can">
                             <rect x="16" y="24" width="32" height="30" rx="3" ry="3" fill="#e74c3c"></rect>
@@ -99,4 +99,46 @@ function addDishesBasketTemplate(dish) {
     `;
 
   return addDishBasket;
+}
+
+function deletedBasketHTML() {
+    let resetBasket = "";
+
+    resetBasket = `
+        
+    <div id="hideInfoaddDishes">
+      <div id="basket" class="basket">
+        <img src="../assets/logos/basket.png" height="50px" alt="warenkorb logo"/>
+       <h2>Vergiss nicht dein Warenkorb zu füllen</h2>
+        <p>
+          Suche deine Lieblingsgerichte aus oder probier etwas Neues, pack
+          die Gerichte in dein Warenkorb und bestelle dein Essen.
+        </p>
+    </div>
+
+ <!-- Generated a Hamster -->
+    <div class="hamster-container">
+      <div  aria-label="Orange and tan hamster running in a metal wheel"  role="img"  class="wheel-and-hamster">
+  <!-- From Uiverse.io by Nawsome -->
+        <div class="wheel"></div>
+        <div class="hamster">
+          <div class="hamster__body">
+            <div class="hamster__head">
+              <div class="hamster__ear"></div>
+              <div class="hamster__eye"></div>
+              <div class="hamster__nose"></div>
+            </div>
+            <div class="hamster__limb hamster__limb--fr"></div>
+            <div class="hamster__limb hamster__limb--fl"></div>
+            <div class="hamster__limb hamster__limb--br"></div>
+            <div class="hamster__limb hamster__limb--bl"></div>
+            <div class="hamster__tail"></div>
+          </div>
+        </div>
+        <div class="spoke"></div>
+      </div>
+    </div>
+`;
+    return resetBasket;   
+
 }
