@@ -1,4 +1,11 @@
 /* From Uiverse.io by Nawsome */ 
+
+.hamster-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wheel-and-hamster {
   --dur: 1s;
   position: relative;

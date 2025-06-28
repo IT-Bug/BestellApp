@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../CSS/sidenav.css" />
     <link rel="stylesheet" href="../CSS/MQ-menu.css" />
     <link rel="stylesheet" href="../CSS/hamster.css" />
-    <link rel="stylesheet" href="../CSS/popup-basket.css">
+    <link rel="stylesheet" href="../CSS/popup-basket.css" />
     <script src="../JS/Language.js"></script>
     <script src="../JS/db.js"></script>
     <script src="../script.js"></script>
@@ -70,23 +70,44 @@
 
       <div class="sideNavContainer">
         <div id="mySidenav" class="sidenav">
-          <h2 data-i18n="basketHeadline" style="padding: 30px 20px; display: flex; justify-content: center">
+          <h2
+            data-i18n="basketHeadline"
+            style="padding: 30px 20px; display: flex; justify-content: center"
+          >
             Warenkorb
           </h2>
-          <div class="change-container toggle-option" id="pickupOption" onclick="toggleBasketOption('deliveryOption')">
+          <div
+            class="change-container toggle-option"
+            id="pickupOption"
+            onclick="toggleBasketOption('deliveryOption')"
+          >
             <div class="change-logo-txt-container">
               <div class="icon-basket">
-                <img class="chg-logos" src="../assets/logos/carblack.png" height="30px" alt="Lieferung icon"/>
+                <img
+                  class="chg-logos"
+                  src="../assets/logos/carblack.png"
+                  height="30px"
+                  alt="Lieferung icon"
+                />
               </div>
               <div>
                 <p data-i18n="basketStep1Titel">Lieferung</p>
                 <p style="font-size: small">15-35 min</p>
               </div>
             </div>
-            
-            <div class="change-logo-txt-container toggle-option" id="pickupOption" onclick="toggleBasketOption('pickup')">
+
+            <div
+              class="change-logo-txt-container toggle-option"
+              id="pickupOption"
+              onclick="toggleBasketOption('pickup')"
+            >
               <div class="icon-basket">
-                <img class="chg-logos"src="../assets/logos/handbasketblack.png" height="30px" alt="abholung logo"/>
+                <img
+                  class="chg-logos"
+                  src="../assets/logos/handbasketblack.png"
+                  height="30px"
+                  alt="abholung logo"
+                />
               </div>
               <div>
                 <p data-i18n="basketStep2Titel">Abholung</p>
@@ -94,41 +115,47 @@
               </div>
             </div>
           </div>
-          
-          <div id="hideInfoaddDishes" class="sidenav-info">
-          <div id="basket" class="basket">
-            <img src="../assets/logos/basket.png" height="50px" alt="warenkorb logo"/>
-            <h2>Vergiss nicht dein Warenkorb zu füllen</h2>
-            <p>
-              Suche deine Lieblingsgerichte aus oder probier etwas Neues, pack
-              die Gerichte in dein Warenkorb und bestelle dein Essen.
-            </p>
-          </div>
 
-          <!-- Generated a Hamster -->
-          <div
-            aria-label="Orange and tan hamster running in a metal wheel"
-            role="img"
-            class="wheel-and-hamster"
-          >
-            <!-- From Uiverse.io by Nawsome -->
-            <div class="wheel"></div>
-            <div class="hamster">
-              <div class="hamster__body">
-                <div class="hamster__head">
-                  <div class="hamster__ear"></div>
-                  <div class="hamster__eye"></div>
-                  <div class="hamster__nose"></div>
+          <div id="hideInfoaddDishes" class="sidenav-info">
+            <div id="basket" class="basket">
+              <img
+                src="../assets/logos/basket.png"
+                height="50px"
+                alt="warenkorb logo"
+              />
+              <h2>Vergiss nicht dein Warenkorb zu füllen</h2>
+              <p>
+                Suche deine Lieblingsgerichte aus oder probier etwas Neues, pack
+                die Gerichte in dein Warenkorb und bestelle dein Essen.
+              </p>
+            </div>
+
+            <!-- Generated a Hamster -->
+            <div class="hamster-container">
+              <div
+                aria-label="Orange and tan hamster running in a metal wheel"
+                role="img"
+                class="wheel-and-hamster"
+              >
+                <!-- From Uiverse.io by Nawsome -->
+                <div class="wheel"></div>
+                <div class="hamster">
+                  <div class="hamster__body">
+                    <div class="hamster__head">
+                      <div class="hamster__ear"></div>
+                      <div class="hamster__eye"></div>
+                      <div class="hamster__nose"></div>
+                    </div>
+                    <div class="hamster__limb hamster__limb--fr"></div>
+                    <div class="hamster__limb hamster__limb--fl"></div>
+                    <div class="hamster__limb hamster__limb--br"></div>
+                    <div class="hamster__limb hamster__limb--bl"></div>
+                    <div class="hamster__tail"></div>
+                  </div>
                 </div>
-                <div class="hamster__limb hamster__limb--fr"></div>
-                <div class="hamster__limb hamster__limb--fl"></div>
-                <div class="hamster__limb hamster__limb--br"></div>
-                <div class="hamster__limb hamster__limb--bl"></div>
-                <div class="hamster__tail"></div>
+                <div class="spoke"></div>
               </div>
             </div>
-            <div class="spoke"></div>
-          </div>
           </div>
         </div>
       </div>
@@ -143,7 +170,9 @@
         <div class="info-container">
           <div class="headline-rating">
             <h1>Moskau's Küche</h1>
-            <a class="rating" href="https://de.trustpilot.com/">Bewertung (4.8 von 5) ⭐</a>
+            <a class="rating" href="https://de.trustpilot.com/"
+              >Bewertung (4.8 von 5) ⭐</a
+            >
           </div>
           <div class="adress-box">
             <h1 style="font-size: large">Adresse</h1>
@@ -173,20 +202,26 @@
           </div>
 
           <div id="popUpBasket"></div>
-          
+
           <div class="basket-btn-container">
-            <div onclick="openBasketPopUp()" class="basket-button"><img style="height: 60px;" src="../assets/logos/BasketPopUp.png" alt=""></div>
+            <div onclick="openBasketPopUp()" class="basket-button">
+              <img
+                style="height: 60px"
+                src="../assets/logos/BasketPopUp.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-      
-      <!-- Footer Section -->
-      
-      <footer>
-        <a data-i18n="footerImp" class="footer-links" href="">Impressum</a>
-        <a data-i18n="footerDatstz" class="footer-links" href="">Datenschutz</a>
-        <a data-i18n="footerContact" class="footer-links" href="">Kontakt</a>
-      </footer>
+
+    <!-- Footer Section -->
+
+    <footer>
+      <a data-i18n="footerImp" class="footer-links" href="">Impressum</a>
+      <a data-i18n="footerDatstz" class="footer-links" href="">Datenschutz</a>
+      <a data-i18n="footerContact" class="footer-links" href="">Kontakt</a>
+    </footer>
   </body>
 </html>

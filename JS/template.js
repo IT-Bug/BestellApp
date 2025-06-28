@@ -1,3 +1,4 @@
+// <!-- From Uiverse.io by philipo30 --> Trash Btn
 // <!-- From Uiverse.io by JasonMep --> Button
 
 let basket = [];
@@ -7,11 +8,13 @@ function getDishBoxTemplate(dish) {
 
   // Dish Image and Headline
   if (dish.backgroundImg) {
-      dishesMenu += `
+    dishesMenu += `
       <div class="dishes-container">
       <div class="dish-box">
           <div id="imageDishBox">
-              <img class="image-size-dishbox" src="${dish.imgDish}" alt="Das Gericht als Bild">
+              <img class="image-size-dishbox" src="${
+                dish.imgDish
+              }" alt="Das Gericht als Bild">
           </div>
           <div id="headlineDishBox">
               <h2 class="headline-style" >${dish.headline}</h2>
@@ -21,7 +24,9 @@ function getDishBoxTemplate(dish) {
           </div>
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket(${dish.id})" class="gen-button">✛</button>
+              <button onclick="addDishesBasket(${
+                dish.id
+              })" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
@@ -33,12 +38,14 @@ function getDishBoxTemplate(dish) {
       </div>
       `;
   } else {
-      dishesMenu += `
+    dishesMenu += `
       <div class="dishes-container">
       <div class="dish-box">
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket(${dish.id})" class="gen-button">✛</button>
+              <button onclick="addDishesBasket(${
+                dish.id
+              })" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
@@ -53,21 +60,33 @@ function getDishBoxTemplate(dish) {
   return dishesMenu;
 }
 
-function addDishesBasketTemplate(dish){
-    let addDishBasket = "";
+function addDishesBasketTemplate(dish) {
+  let addDishBasket = "";
 
-    addDishBasket = `
+  addDishBasket = `
     
     <div class="sidenav-info">
-        <div class="dishes-container">
-          <div class="dish-box">
-            <div class="name-btn-container">
-              <h3 class="headline-dish-info-box">${dish.name}</h3>
+        <div class="dishes-container-basket">
+          <div class="dish-box-basket">
+            <div class="headline-dish-basket">
+              <h3 style="font-size: 20px;">${dish.name}</h3>
             </div>
             
             <div class="discription-container">
-              <div>
+              <div class="dish-price-add-container">
+                <button class="dish-btn-style">+</button>
                 <h3>${dish.price.toFixed(2)} €</h3>
+                    <button aria-label="Delete item" class="delete-button">
+                      <svg class="trash-svg" viewBox="0 -10 64 74" xmlns="http://www.w3.org/2000/svg">
+                        <g id="trash-can">
+                          <rect x="16" y="24" width="32" height="30" rx="3" ry="3" fill="#e74c3c"></rect>
+                          <g transform-origin="12 18" id="lid-group">
+                            <rect x="12" y="12" width="40" height="6" rx="2" ry="2" fill="#c0392b"></rect>
+                            <rect x="26" y="8" width="12" height="4" rx="2" ry="2" fill="#c0392b"></rect>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
               </div>
             </div>
           </div>
@@ -76,5 +95,5 @@ function addDishesBasketTemplate(dish){
     
     `;
 
-    return addDishBasket;
+  return addDishBasket;
 }

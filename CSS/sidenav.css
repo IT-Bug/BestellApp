@@ -55,8 +55,31 @@
 }
 
 .sidenav-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
 }
+
+.dishes-container-basket {
+    background-color: rgba(105, 105, 105, 0.13);    
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.dish-box-basket {
+    padding: 20px;
+    width: 100%;
+}
+
+.dish-price-add-container {
+    display: flex;
+    justify-content: space-around;
+}
+/* 
+.dish-btn-style {
+
+} */
+
