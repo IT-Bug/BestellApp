@@ -26,9 +26,7 @@ function addDishesBasket(dishId) {
     
     if (dish) {
       hideInfoBasket.innerHTML = `
-        <div>
           ${addDishesBasketTemplate(dish)}
-        </div>
       `;
     }
   }

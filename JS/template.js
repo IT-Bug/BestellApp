@@ -58,7 +58,7 @@ function addDishesBasketTemplate(dish) {
   let addDishBasket = "";
 
   addDishBasket = `
-    
+  
     <div class="sidenav-info">
           <div class="dish-box-basket">
             <div class="headline-dish-basket">
