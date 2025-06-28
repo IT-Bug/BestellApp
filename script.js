@@ -20,6 +20,7 @@ function renderDishBoxContent() {
 
 function addDishesBasket(dishId) {
   let hideInfoBasket = document.getElementById("hideInfoaddDishes");
+
   if (hideInfoBasket) {
     let dish = dishes.find(d => d.id === dishId)
     
@@ -27,6 +28,22 @@ function addDishesBasket(dishId) {
       hideInfoBasket.innerHTML = `
         <div>
           ${addDishesBasketTemplate(dish)}
+        </div>
+      `;
+    }
+  }
+}
+
+function addDishesBasketMobile(dishId) {
+  openBasketPopUp();
+  let hideInfoBasketMobile = document.getElementById("mobileBasket");
+  
+  if (hideInfoBasketMobile) {
+    let dish = dishes.find(d => d.id === dishId)
+    if (dish) {
+      hideInfoBasketMobile.innerHTML = `
+        <div>
+          ${addDishesBasketMobileTemplate(dish)}
         </div>
       `;
     }

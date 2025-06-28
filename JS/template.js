@@ -22,9 +22,7 @@ function getDishBoxTemplate(dish) {
           </div>
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket(${
-                dish.id
-              })" class="gen-button">✛</button>
+              <button onclick="addDishesBasket(${dish.id}); addDishesBasketMobile(${dish.id})" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
@@ -41,7 +39,7 @@ function getDishBoxTemplate(dish) {
       <div class="dish-box">
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket(${dish.id})" class="gen-button">✛</button>
+              <button onclick="addDishesBasket(${dish.id}); addDishesBasketMobile(${dish.id})" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
