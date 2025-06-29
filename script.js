@@ -58,3 +58,23 @@ function deleteDishFromBasket() {
     </div>
   `;}
 }
+
+function finshedBasket() {
+  let emptyAlertRef = document.getElementById('emptyAlert');
+  let finishAlertRef = document.getElementById('finishAlert');
+
+  if (basket.length === 0) {
+    emptyAlertRef.style.display = 'block';
+    setTimeout(() => {
+      emptyAlertRef.style.display = 'none';
+    }, 5000);
+  } else if (basket.length > 0) { 
+    finishAlertRef.style.display = 'block';
+    setTimeout(() => {
+      finishAlertRef.style.display = 'none';
+    }, 5000);
+  }
+  
+
+
+}

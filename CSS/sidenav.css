@@ -42,6 +42,25 @@
     border-radius: 30px;
 }
 
+.empty-alert {
+    background-color: rgb(255, 86, 86);
+    width: 80%;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px 10px;
+    filter: drop-shadow(0px 0px 10px #ff0000);
+    display: none;
+}
+.finish-alert {
+    background-color: rgb(27, 255, 76);
+    width: 80%;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px 10px;
+    filter: drop-shadow(0px 0px 10px #01ad0f);
+    display: none;
+}
+
 .basket {
     padding: 100px 20px;
     display: flex;
