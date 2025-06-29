@@ -63,7 +63,7 @@ function addDishesBasketTemplate(dish) {
           <div class="dish-box-basket">
             <div class="headline-dish-basket">
               <h3 style="font-size: 15px; text-decoration: underline;">${dish.name}</h3>
-              <h3 style="font-size: 15px;">${dish.price.toFixed(2)} €</h3>
+              <h3 id="basketPrice" data-base-price="${dish.price}" style="font-size: 15px;">${dish.price.toFixed(2)} €</h3>
             </div>
 
             <div style="display: flex; justify-content: flex-start;">
@@ -72,8 +72,9 @@ function addDishesBasketTemplate(dish) {
             
             <div class="discription-container">
               <div class="dish-price-add-container">
-
-                <button onclick="deleteDishFromBasket()" aria-label="Delete item" class="delete-button">
+                
+                <div id="hideTrash">
+                  <button onclick="deleteDishFromBasket()" aria-label="Delete item" class="delete-button">
                     <svg class="trash-svg" viewBox="0 -10 64 74" xmlns="http://www.w3.org/2000/svg">
                         <g id="trash-can">
                             <rect x="16" y="24" width="32" height="30" rx="3" ry="3" fill="#e74c3c"></rect>
@@ -84,11 +85,12 @@ function addDishesBasketTemplate(dish) {
                             </g>
                         </g>
                     </svg>
-                </button>
-                
+                  </button>
+                </div>
+
                 <span id="amount">1</span>
                 
-                <p class="add-btn-basket">✛</p>
+                <p onclick="addAmount()" class="add-btn-basket">✛</p>
               </div>
             </div>
           </div>

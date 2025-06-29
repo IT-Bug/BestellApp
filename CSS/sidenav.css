@@ -78,6 +78,9 @@
     flex-direction: column;
     gap: 30px;
     width: 100%;
+    background-color: #EFEDEA;
+    border-radius: 24px;
+    padding: 13px;
 }
 
 .dish-price-add-container {
@@ -100,6 +103,24 @@
 }
 
 .add-btn-basket:hover {
+    color: #ffa600;
+    background: rgba(255,128,0,0.08);
+    border-radius: 20px;
+    transition: ease-in 0.2s;
+}
+
+.less-btn-basket {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.less-btn-basket:hover {
     color: #ffa600;
     background: rgba(255,128,0,0.08);
     border-radius: 20px;
