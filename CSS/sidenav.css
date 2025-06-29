@@ -56,6 +56,10 @@
     padding: 20px 10px;
     text-align: center;
     width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 46.2rem;
 }
 
 .headline-dish-basket {    
@@ -69,7 +73,6 @@
 .discription-container {
     display: flex;
     flex-direction: column;
-    gap: 50px;
     width: 100%;
 }
 
@@ -89,6 +92,7 @@
     align-items: center;
     background-color: rgba(128, 128, 128, 0.164);
     border-radius: 20px;
+    padding: 4px;
 }
 
 .add-btn-basket {
@@ -130,4 +134,18 @@
 .extra-info {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.basket-finish-btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20%;
+}
+
+.hamster-finishbtn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 90px;
 }

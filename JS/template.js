@@ -94,6 +94,13 @@ function addDishesBasketTemplate(dish) {
               </div>
             </div>
           </div>
+
+          <div class="basket-finish-btn">
+            <button class="finish-btn" data-text="Awesome">
+              <span class="actual-text">BESTELLUNG</span>
+              <span aria-hidden="true" class="hover-text">AUFGEBEN</span>
+            </button>
+          </div>
     </div>
     
     `;
@@ -117,6 +124,7 @@ function deletedBasketHTML() {
     </div>
 
  <!-- Generated a Hamster -->
+ <div class="hamster-finishbtn-container">
     <div class="hamster-container">
       <div  aria-label="Orange and tan hamster running in a metal wheel"  role="img"  class="wheel-and-hamster">
   <!-- From Uiverse.io by Nawsome -->
@@ -138,7 +146,15 @@ function deletedBasketHTML() {
         <div class="spoke"></div>
       </div>
     </div>
-`;
+
+    <div class="basket-finish-btn">
+      <button class="finish-btn" data-text="Awesome">
+        <span class="actual-text">BESTELLUNG</span>
+        <span aria-hidden="true" class="hover-text">AUFGEBEN</span>
+      </button>
+    </div>
+  </div>
+  `;
     return resetBasket;   
 
 }

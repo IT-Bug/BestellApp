@@ -12,7 +12,7 @@ function addAmount() {
 
     
     trashElement.innerHTML = `
-        <img src="../assets/icon/minus.png" onclick="removeAmount()">
+        <p class="less-btn-basket" onclick="removeAmount()">─</p>
     `;
 }
 
