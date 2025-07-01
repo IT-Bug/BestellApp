@@ -59,7 +59,7 @@ let translations = {
 
         UK: "Vereinigtes Königreich",
         DE: "Deutschland",
-       
+
     // Homepage translation    
 
         headline: "Das Beste Essen in Deiner Nähe!",

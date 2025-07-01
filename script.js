@@ -1,7 +1,12 @@
+
+let basket = [];
+
 function init() {
   renderDishBoxContent();
 }
 
+
+//  mid Menu content
 function renderDishBoxContent() {
   let dishContainer = document.getElementById("dishBoxContent");
   dishContainer.innerHTML = "";
@@ -17,6 +22,8 @@ function renderDishBoxContent() {
     `;
   }
 }
+
+// add Dishes in Basket
 
 function addDishesBasket(dishId) {
   let dishInBasket = basket.find(item => item.dishId === dishId);
@@ -37,6 +44,8 @@ function addDishesBasket(dishId) {
   }
 }
 
+// add Dishes in Basket Mobile
+
 function addDishesBasketMobile(dishId) {
   openBasketPopUp();
   let hideInfoBasketMobile = document.getElementById("mobileBasket");
@@ -53,25 +62,25 @@ function addDishesBasketMobile(dishId) {
   }
 }
 
+// delete Dishes from Basket
+
 function deleteDishFromBasket(dishId) {
   let hideInfoBasket = document.getElementById('hideInfoaddDishes');
-  let dishInBasket = basket.find(item => item.dishId === dishId);
+  basket = basket.filter(item => item.dishId !== dishId);
   
   if (hideInfoBasket) {
+    hideInfoBasket.innerHTML = "";
     hideInfoBasket.innerHTML = `
     <div>
-      ${deletedBasketHTML()}
+    ${deletedBasketHTML()}
     </div>
-  `;}
-
-    if (dishInBasket) {
-    dishInBasket.amount--;
-  } else {
-    basket.splice({ dishId: dishId, amount: 1 });
+    `;
   }
 
-
+      basket = [];
 }
+
+// finished order
 
 function finshedBasket() {
   let hideInfoBasket = document.getElementById('hideInfoaddDishes');
@@ -88,14 +97,15 @@ function finshedBasket() {
     setTimeout(() => {
       finishAlertRef.style.display = 'none';
     }, 5000);
-    
+
+    basket = [];
+
+    hideInfoBasket.innerHTML = "";
+
     hideInfoBasket.innerHTML = `
     <div>
       ${deletedBasketHTML()}
     </div>
     `;
   } 
-
-  
-
 }

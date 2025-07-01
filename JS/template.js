@@ -1,8 +1,6 @@
 // <!-- From Uiverse.io by philipo30 --> Trash Btn
 // <!-- From Uiverse.io by JasonMep --> Button
 
-let basket = [];
-
 function getDishBoxTemplate(dish) {
   let dishesMenu = "";
 
@@ -12,7 +10,9 @@ function getDishBoxTemplate(dish) {
       <div class="dishes-container">
       <div class="dish-box">
           <div id="imageDishBox">
-              <img class="image-size-dishbox" src="${dish.imgDish}" alt="Das Gericht als Bild">
+              <img class="image-size-dishbox" src="${
+                dish.imgDish
+              }" alt="Das Gericht als Bild">
           </div>
           <div id="headlineDishBox">
               <h2 class="headline-style" >${dish.headline}</h2>
@@ -22,7 +22,11 @@ function getDishBoxTemplate(dish) {
           </div>
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket(${dish.id}); addDishesBasketMobile(${dish.id})" class="gen-button">✛</button>
+              <button onclick="addDishesBasket(${
+                dish.id
+              }); addDishesBasketMobile(${
+      dish.id
+    })" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
@@ -39,7 +43,11 @@ function getDishBoxTemplate(dish) {
       <div class="dish-box">
           <div class="name-btn-container">
               <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket(${dish.id}); addDishesBasketMobile(${dish.id})" class="gen-button">✛</button>
+              <button onclick="addDishesBasket(${
+                dish.id
+              }); addDishesBasketMobile(${
+      dish.id
+    })" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
               <div class="desc-price-container">
@@ -62,8 +70,12 @@ function addDishesBasketTemplate(dish) {
     <div class="sidenav-info">
           <div class="dish-box-basket">
             <div class="headline-dish-basket">
-              <h3 style="font-size: 15px; text-decoration: underline;">${dish.name}</h3>
-              <h3 id="basketPrice" data-base-price="${dish.price}" style="font-size: 15px;">${dish.price.toFixed(2)} €</h3>
+              <h3 style="font-size: 15px; text-decoration: underline;">${
+                dish.name
+              }</h3>
+              <h3 id="basketPrice" data-base-price="${
+                dish.price
+              }" style="font-size: 15px;">${dish.price.toFixed(2)} €</h3>
             </div>
 
             <div style="display: flex; justify-content: flex-start;">
@@ -109,11 +121,11 @@ function addDishesBasketTemplate(dish) {
 }
 
 function deletedBasketHTML() {
-    let resetBasket = "";
+  let resetBasket = "";
 
-    resetBasket = `
+  resetBasket = `
 <!-- PopUp empty alert -->
-        
+
   <div id="emptyAlert" class="empty-alert">
     <span style="color: aliceblue;">Dein Warenkorb ist Leer, fülle Ihn damit du die Bestellung abschließen kannst.</span>
   </div>
@@ -127,18 +139,21 @@ function deletedBasketHTML() {
     <div id="hideInfoaddDishes">
       <div id="basket" class="basket">
         <img src="../assets/logos/basket.png" height="50px" alt="warenkorb logo"/>
-       <h2>Vergiss nicht dein Warenkorb zu füllen</h2>
+        <h2>Vergiss nicht dein Warenkorb zu füllen</h2>
         <p>
           Suche deine Lieblingsgerichte aus oder probier etwas Neues, pack
           die Gerichte in dein Warenkorb und bestelle dein Essen.
         </p>
     </div>
 
- <!-- Generated a Hamster -->
- <div class="hamster-finishbtn-container">
+<!-- Generated a Hamster -->
+
+<div class="hamster-finishbtn-container">
     <div class="hamster-container">
       <div  aria-label="Orange and tan hamster running in a metal wheel"  role="img"  class="wheel-and-hamster">
+
   <!-- From Uiverse.io by Nawsome -->
+
         <div class="wheel"></div>
         <div class="hamster">
           <div class="hamster__body">
@@ -167,7 +182,5 @@ function deletedBasketHTML() {
   </div>
   `;
 
-  
-    return resetBasket;   
-
+  return resetBasket;
 }
