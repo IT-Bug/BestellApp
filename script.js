@@ -19,11 +19,16 @@ function renderDishBoxContent() {
 }
 
 function addDishesBasket(dishId) {
-  let hideInfoBasket = document.getElementById("hideInfoaddDishes");
+  let dishInBasket = basket.find(item => item.dishId === dishId);
+  if (dishInBasket) {
+    dishInBasket.amount++;
+  } else {
+    basket.push({ dishId: dishId, amount: 1 });
+  }
 
+  let hideInfoBasket = document.getElementById("hideInfoaddDishes");
   if (hideInfoBasket) {
     let dish = dishes.find(d => d.id === dishId)
-    
     if (dish) {
       hideInfoBasket.innerHTML = `
           ${addDishesBasketTemplate(dish)}
@@ -48,18 +53,28 @@ function addDishesBasketMobile(dishId) {
   }
 }
 
-function deleteDishFromBasket() {
+function deleteDishFromBasket(dishId) {
   let hideInfoBasket = document.getElementById('hideInfoaddDishes');
-
+  let dishInBasket = basket.find(item => item.dishId === dishId);
+  
   if (hideInfoBasket) {
     hideInfoBasket.innerHTML = `
     <div>
       ${deletedBasketHTML()}
     </div>
   `;}
+
+    if (dishInBasket) {
+    dishInBasket.amount--;
+  } else {
+    basket.splice({ dishId: dishId, amount: 1 });
+  }
+
+
 }
 
 function finshedBasket() {
+  let hideInfoBasket = document.getElementById('hideInfoaddDishes');
   let emptyAlertRef = document.getElementById('emptyAlert');
   let finishAlertRef = document.getElementById('finishAlert');
 
@@ -73,8 +88,14 @@ function finshedBasket() {
     setTimeout(() => {
       finishAlertRef.style.display = 'none';
     }, 5000);
-  }
-  
+    
+    hideInfoBasket.innerHTML = `
+    <div>
+      ${deletedBasketHTML()}
+    </div>
+    `;
+  } 
 
+  
 
 }

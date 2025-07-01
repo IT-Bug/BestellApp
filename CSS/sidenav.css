@@ -3,7 +3,7 @@
 .sideNavContainer {
     position: sticky;
     right: 0;
-    width: 26%;
+    width: 28%;
     height: 100vh;
     top: 0;
     z-index: 1;
@@ -26,7 +26,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    margin-bottom: 50px;
 }
 
 .change-logo-txt-container {
@@ -62,7 +61,7 @@
 }
 
 .basket {
-    padding: 100px 20px;
+    padding: 50px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,13 +71,13 @@
 }
 
 .sidenav-info {
-    padding: 20px 10px;
+    padding: 50px 10px;
     text-align: center;
     width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 46.2rem;
+    height: 41.2rem;
 }
 
 .headline-dish-basket {    

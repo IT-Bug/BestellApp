@@ -96,7 +96,7 @@ function addDishesBasketTemplate(dish) {
           </div>
 
           <div class="basket-finish-btn">
-            <button class="finish-btn" data-text="Awesome">
+            <button onclick="finshedBasket()" class="finish-btn" data-text="Awesome">
               <span class="actual-text">BESTELLUNG</span>
               <span aria-hidden="true" class="hover-text">AUFGEBEN</span>
             </button>
@@ -112,7 +112,18 @@ function deletedBasketHTML() {
     let resetBasket = "";
 
     resetBasket = `
+<!-- PopUp empty alert -->
         
+  <div id="emptyAlert" class="empty-alert">
+    <span style="color: aliceblue;">Dein Warenkorb ist Leer, fülle Ihn damit du die Bestellung abschließen kannst.</span>
+  </div>
+
+<!-- PopUp finished alert -->
+
+  <div id="finishAlert" class="finish-alert">
+    <span>Vielen Dank für Ihren Einkauf, Ihre Bestellung wird vorbereitet!</span>
+  </div>
+
     <div id="hideInfoaddDishes">
       <div id="basket" class="basket">
         <img src="../assets/logos/basket.png" height="50px" alt="warenkorb logo"/>
@@ -148,13 +159,15 @@ function deletedBasketHTML() {
     </div>
 
     <div class="basket-finish-btn">
-      <button class="finish-btn" data-text="Awesome">
+      <button onclick="finshedBasket()" class="finish-btn" data-text="Awesome">
         <span class="actual-text">BESTELLUNG</span>
         <span aria-hidden="true" class="hover-text">AUFGEBEN</span>
       </button>
     </div>
   </div>
   `;
+
+  
     return resetBasket;   
 
 }
