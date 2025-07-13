@@ -6,7 +6,6 @@ function init() {
 }
 
 
-//  mid Menu content
 function renderDishBoxContent() {
   let dishContainer = document.getElementById("dishBoxContent");
   dishContainer.innerHTML = "";
@@ -23,7 +22,48 @@ function renderDishBoxContent() {
   }
 }
 
-// add Dishes in Basket
+
+function renderBasket() {
+  let container = document.getElementById("hideInfoaddDishes");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  let total = 0;
+
+  for (let item of basket) {
+    let dish = dishes.find(d => d.id === item.dishId);
+    if (dish) {
+      total += dish.price * item.amount;
+      container.innerHTML += addDishesBasketTemplate(dish, item.amount);
+    }
+  }
+
+  
+  if (basket.length === 0) {
+    container.innerHTML = deletedBasketHTML();
+    return;
+  }
+
+  container.innerHTML += `
+    <div class="finish-conatiner">
+      <div>
+        <div class="x-stripe-container">
+          <div class="horizontal-strip"></div>
+        </div>
+        <h3>Gesamtbetrag</h3>
+        <span>Summe: ${total.toFixed(2)} €</span>
+      </div>
+
+      <div class="basket-finish-btn">
+        <button onclick="finshedBasket()" class="finish-btn" data-text="Awesome">
+          <span class="actual-text">BESTELLUNG</span>
+          <span aria-hidden="true" class="hover-text">AUFGEBEN</span>
+        </button>
+      </div>
+    </div>
+  `;
+}
 
 function addDishesBasket(dishId) {
   let dishInBasket = basket.find(item => item.dishId === dishId);
@@ -32,22 +72,11 @@ function addDishesBasket(dishId) {
   } else {
     basket.push({ dishId: dishId, amount: 1 });
   }
-
-  let hideInfoBasket = document.getElementById("hideInfoaddDishes");
-  if (hideInfoBasket) {
-    let dish = dishes.find(d => d.id === dishId)
-    if (dish) {
-      hideInfoBasket.innerHTML = `
-          ${addDishesBasketTemplate(dish)}
-      `;
-    }
-  }
+  renderBasket();
 }
 
-// add Dishes in Basket Mobile
 
 function addDishesBasketMobile(dishId) {
-  openBasketPopUp();
   let hideInfoBasketMobile = document.getElementById("mobileBasket");
   
   if (hideInfoBasketMobile) {
@@ -62,25 +91,10 @@ function addDishesBasketMobile(dishId) {
   }
 }
 
-// delete Dishes from Basket
-
 function deleteDishFromBasket(dishId) {
-  let hideInfoBasket = document.getElementById('hideInfoaddDishes');
   basket = basket.filter(item => item.dishId !== dishId);
-  
-  if (hideInfoBasket) {
-    hideInfoBasket.innerHTML = "";
-    hideInfoBasket.innerHTML = `
-    <div>
-    ${deletedBasketHTML()}
-    </div>
-    `;
-  }
-
-      basket = [];
+  renderBasket();
 }
-
-// finished order
 
 function finshedBasket() {
   let hideInfoBasket = document.getElementById('hideInfoaddDishes');
@@ -108,4 +122,17 @@ function finshedBasket() {
     </div>
     `;
   } 
+}
+
+function removeDishesBasket(dishId) {
+  let dishInBasket = basket.find(item => item.dishId === dishId);
+  if (dishInBasket) {
+    if (dishInBasket.amount > 1) {
+      dishInBasket.amount--;
+    } else {
+      // Wenn nur noch 1 Stück, dann komplett entfernen
+      basket = basket.filter(item => item.dishId !== dishId);
+    }
+    renderBasket();
+  }
 }

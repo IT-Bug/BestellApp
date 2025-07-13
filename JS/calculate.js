@@ -10,10 +10,6 @@ function addAmount() {
     let basePrice = parseFloat(priceElement.getAttribute('data-base-price'));
     priceElement.innerText = (basePrice * (numberAmount + 1)).toFixed(2) + ' €';
 
-    
-    trashElement.innerHTML = `
-        <p class="less-btn-basket" onclick="removeAmount()">─</p>
-    `;
 }
 
 function removeAmount() {
@@ -45,3 +41,5 @@ function removeAmount() {
         }
     }
 }
+
+// add amount Zeile 14-17, minus fehlt
