@@ -41,5 +41,3 @@ function removeAmount() {
         }
     }
 }
-
-// add amount Zeile 14-17, minus fehlt

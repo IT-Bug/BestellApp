@@ -1,5 +1,7 @@
 
 let basket = [];
+let isDelivery = false;
+let deliveryCost = 2.50;
 
 function init() {
   renderDishBoxContent();
@@ -39,11 +41,14 @@ function renderBasket() {
     }
   }
 
-  
   if (basket.length === 0) {
     container.innerHTML = deletedBasketHTML();
     return;
   }
+
+  // Liefervariable hinzufügen
+  let deliveryText = isDelivery ? `Lieferkosten +${deliveryCost.toFixed(2)} €` : "";
+  let displayTotal = isDelivery ? total + deliveryCost : total;
 
   container.innerHTML += `
     <div class="finish-conatiner">
@@ -52,7 +57,8 @@ function renderBasket() {
           <div class="horizontal-strip"></div>
         </div>
         <h3>Gesamtbetrag</h3>
-        <span>Summe: ${total.toFixed(2)} €</span>
+        <h4>${deliveryText}</h4>
+        <span id="totalValue">Summe: ${displayTotal.toFixed(2)} €</span>
       </div>
 
       <div class="basket-finish-btn">
@@ -64,6 +70,9 @@ function renderBasket() {
     </div>
   `;
 }
+
+
+
 
 function addDishesBasket(dishId) {
   let dishInBasket = basket.find(item => item.dishId === dishId);
@@ -130,9 +139,23 @@ function removeDishesBasket(dishId) {
     if (dishInBasket.amount > 1) {
       dishInBasket.amount--;
     } else {
-      // Wenn nur noch 1 Stück, dann komplett entfernen
       basket = basket.filter(item => item.dishId !== dishId);
     }
     renderBasket();
+  }
+}
+
+function deliveryOption() {
+  let checkboxDelivery = document.getElementById("checkboxDelivery");
+    isDelivery = true;
+    renderBasket();
+  }
+  
+  function pickupOption() {
+  let checkboxPickup = document.getElementById("checkboxPickup");
+  if (checkboxPickup) {   
+    checkboxPickup.classList.add("checked-pickup");
+  isDelivery = false;
+  renderBasket();
   }
 }

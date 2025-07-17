@@ -37,3 +37,28 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+
+#checkboxDelivery {
+    height: 30px;
+    cursor: pointer;
+}
+
+#checkboxPickup {
+    height: 30px;
+    cursor: pointer;
+}
+
+.checkbox-logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 18px;
+}
+
+.checkbox-logo-container:hover {
+    background-color: #ffffffce;
+    border-radius: 5px;
+    border-radius: 18px;
+    filter: drop-shadow(0px 0px 4px #ffffff);
+}

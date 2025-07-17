@@ -50,7 +50,7 @@ let translations = {
 
     de: {
 
-    // Menu translaton
+    // Menu translation
 
         basketHeadline: "Warenkorb",
         langHeadline: "Land",
@@ -81,10 +81,10 @@ let translations = {
     },
 }
 
-function translatePage(lang) { // (parameter) "de" or "en"
-    let elements = document.querySelectorAll('[data-i18n]'); // searched all Attributes with data-i18n="..." and saved
+function translatePage(lang) { 
+    let elements = document.querySelectorAll('[data-i18n]'); 
 
-    elements.forEach(el => { // forEach is a Loop & el executes a function for each individual element.
+    elements.forEach(el => { 
         let key = el.getAttribute('data-i18n');
 
         if (translations[lang] && translations[lang][key]) {

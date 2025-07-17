@@ -4,7 +4,6 @@
 function getDishBoxTemplate(dish) {
   let dishesMenu = "";
 
-  // Dish Image and Headline
   if (dish.backgroundImg) {
     dishesMenu += `
       <div class="dishes-container">
