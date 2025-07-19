@@ -7,59 +7,51 @@ function getDishBoxTemplate(dish) {
   if (dish.backgroundImg) {
     dishesMenu += `
       <div class="dishes-container">
-      <div class="dish-box">
+        <div class="dish-box">
           <div id="imageDishBox">
-              <img class="image-size-dishbox" src="${
-                dish.imgDish
-              }" alt="Das Gericht als Bild">
+            <img class="image-size-dishbox" src="${dish.imgDish}" alt="Das Gericht als Bild">
           </div>
           <div id="headlineDishBox">
-              <h2 class="headline-style" >${dish.headline}</h2>
+            <h2 class="headline-style">${dish.headline}</h2>
           </div>
           <div class="x-stripe-container">
-              <div class="horizontal-strip"></div>
+            <div class="horizontal-strip"></div>
           </div>
           <div class="name-btn-container">
-              <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket(${
-                dish.id
-              }); addDishesBasketMobile(${
-      dish.id
-    })" class="gen-button">✛</button>
+            <h3 class="headline-dish-info-box">${dish.name}</h3>
+            <button onclick="addDishesBasket(${dish.id})" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
-              <div class="desc-price-container">
-                  <p class="p-style-dishBoxes">${dish.description}</p>
-                  <h3>${dish.price.toFixed(2)} €</h3>
-              </div>
+            <div class="desc-price-container">
+              <p class="p-style-dishBoxes">${dish.description}</p>
+              <h3>${dish.price.toFixed(2)} €</h3>
+            </div>
           </div>
+        </div>
       </div>
-      </div>
-      `;
+    `;
   } else {
     dishesMenu += `
       <div class="dishes-container">
-      <div class="dish-box">
+        <div class="dish-box">
           <div class="name-btn-container">
-              <h3 class="headline-dish-info-box">${dish.name}</h3>
-              <button onclick="addDishesBasket(${
-                dish.id
-              }); addDishesBasketMobile(${
-      dish.id
-    })" class="gen-button">✛</button>
+            <h3 class="headline-dish-info-box">${dish.name}</h3>
+            <button onclick="addDishesBasket(${dish.id})" class="gen-button">✛</button>
           </div>
           <div class="discription-container">
-              <div class="desc-price-container">
-                  <p class="p-style-dishBoxes">${dish.description}</p>
-                  <h3>${dish.price.toFixed(2)} €</h3>
-              </div>
+            <div class="desc-price-container">
+              <p class="p-style-dishBoxes">${dish.description}</p>
+              <h3>${dish.price.toFixed(2)} €</h3>
+            </div>
           </div>
+        </div>
       </div>
-      </div>
-      `;
+    `;
   }
+
   return dishesMenu;
 }
+
 
 function addDishesBasketTemplate(dish, amount) {
   return `
@@ -71,10 +63,7 @@ function addDishesBasketTemplate(dish, amount) {
         </div>
         <div class="discription-container">
           <div class="dish-price-add-container">
-            <div id="hideTrash">
-              ${
-                amount === 1
-                  ? `<button onclick="deleteDishFromBasket(${dish.id})" aria-label="Delete item" class="delete-button">
+            <div id="hideTrash">${amount === 1 ? `<button onclick="deleteDishFromBasket(${dish.id})" aria-label="Delete item" class="delete-button">
                       <svg class="trash-svg" viewBox="0 -10 64 74" xmlns="http://www.w3.org/2000/svg">
                         <g id="trash-can">
                           <rect x="16" y="24" width="32" height="30" rx="3" ry="3" fill="#e74c3c"></rect>
@@ -84,9 +73,7 @@ function addDishesBasketTemplate(dish, amount) {
                           </g>
                         </g>
                       </svg>
-                    </button>`
-                  : `<p onclick="removeDishesBasket(${dish.id})" class="less-btn-basket">─</p>`
-              }
+                    </button>` : `<p onclick="removeDishesBasket(${dish.id})" class="less-btn-basket">─</p>`}
             </div>
             <span id="amount">${amount}</span>
             <p onclick="addDishesBasket(${dish.id})" class="add-btn-basket">✛</p>

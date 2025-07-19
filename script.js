@@ -5,6 +5,8 @@ let deliveryCost = 2.50;
 
 function init() {
   renderDishBoxContent();
+  renderBasket(); 
+  renderMobileBasket();
 }
 
 
@@ -46,7 +48,6 @@ function renderBasket() {
     return;
   }
 
-  // Liefervariable hinzufügen
   let deliveryText = isDelivery ? `Lieferkosten +${deliveryCost.toFixed(2)} €` : "";
   let displayTotal = isDelivery ? total + deliveryCost : total;
 
@@ -82,27 +83,13 @@ function addDishesBasket(dishId) {
     basket.push({ dishId: dishId, amount: 1 });
   }
   renderBasket();
-}
-
-
-function addDishesBasketMobile(dishId) {
-  let hideInfoBasketMobile = document.getElementById("mobileBasket");
-  
-  if (hideInfoBasketMobile) {
-    let dish = dishes.find(d => d.id === dishId)
-    if (dish) {
-      hideInfoBasketMobile.innerHTML = `
-        <div>
-          ${addDishesBasketMobileTemplate(dish)}
-        </div>
-      `;
-    }
-  }
+  renderMobileBasket();
 }
 
 function deleteDishFromBasket(dishId) {
   basket = basket.filter(item => item.dishId !== dishId);
   renderBasket();
+  renderMobileBasket();
 }
 
 function finshedBasket() {
@@ -142,6 +129,7 @@ function removeDishesBasket(dishId) {
       basket = basket.filter(item => item.dishId !== dishId);
     }
     renderBasket();
+    renderMobileBasket();
   }
 }
 
