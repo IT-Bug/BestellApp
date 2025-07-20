@@ -72,6 +72,51 @@ function renderBasket() {
   `;
 }
 
+function renderMobilefinishBasket() {
+  let container = document.getElementById("finishMobileBasket");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  let total = 0;
+
+  for (let item of basket) {
+    let dish = dishes.find(d => d.id === item.dishId);
+    if (dish) {
+      total += dish.price * item.amount;
+      container.innerHTML += addMobileDishesBasketTemplate(dish, item.amount);
+    }
+  }
+
+  if (basket.length === 0) {
+    container.innerHTML = deletedBasketHTML();
+    return;
+  }
+
+  let deliveryText = isDelivery ? `Lieferkosten +${deliveryCost.toFixed(2)} €` : "";
+  let displayTotal = isDelivery ? total + deliveryCost : total;
+
+  container.innerHTML += `
+    <div class="finish-conatiner">
+      <div>
+        <div class="x-stripe-container">
+          <div class="horizontal-strip"></div>
+        </div>
+        <h3>Gesamtbetrag</h3>
+        <h4>${deliveryText}</h4>
+        <span id="totalValue">Summe: ${displayTotal.toFixed(2)} €</span>
+      </div>
+
+      <div class="basket-finish-btn">
+        <button onclick="finshedBasket()" class="finish-btn" data-text="Awesome">
+          <span class="actual-text">BESTELLUNG</span>
+          <span aria-hidden="true" class="hover-text">AUFGEBEN</span>
+        </button>
+      </div>
+    </div>
+  `;
+}
+
 
 
 
@@ -134,16 +179,12 @@ function removeDishesBasket(dishId) {
 }
 
 function deliveryOption() {
-  let checkboxDelivery = document.getElementById("checkboxDelivery");
     isDelivery = true;
     renderBasket();
-  }
+}
   
-  function pickupOption() {
-  let checkboxPickup = document.getElementById("checkboxPickup");
-  if (checkboxPickup) {   
-    checkboxPickup.classList.add("checked-pickup");
+  function pickupOption(){
   isDelivery = false;
   renderBasket();
-  }
 }
+

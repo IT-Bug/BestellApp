@@ -61,6 +61,7 @@
     flex-direction: column;
     text-align: center;
     gap: 20px;
+    overflow-x: auto;
 }
 
 .sidenav-info {

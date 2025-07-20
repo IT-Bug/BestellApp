@@ -1,5 +1,4 @@
 
-
 #popUpBasket {
     display: flex;
     justify-content: center;
@@ -50,4 +49,20 @@
 
 .mobile-basket-buttons {
     display: flex;
+}
+
+#finishMobileBasket {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dish-box-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: #EFEDEA;
+    border-radius: 24px;
+    padding: 13px;
 }
