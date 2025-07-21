@@ -63,7 +63,7 @@ function renderBasket() {
       </div>
 
       <div class="basket-finish-btn">
-        <button onclick="finshedBasket()" class="finish-btn" data-text="Awesome">
+        <button onclick="finishedBasket()" class="finish-btn" data-text="Awesome">
           <span class="actual-text">BESTELLUNG</span>
           <span aria-hidden="true" class="hover-text">AUFGEBEN</span>
         </button>
@@ -72,50 +72,7 @@ function renderBasket() {
   `;
 }
 
-function renderMobilefinishBasket() {
-  let container = document.getElementById("finishMobileBasket");
-  if (!container) return;
 
-  container.innerHTML = "";
-
-  let total = 0;
-
-  for (let item of basket) {
-    let dish = dishes.find(d => d.id === item.dishId);
-    if (dish) {
-      total += dish.price * item.amount;
-      container.innerHTML += addMobileDishesBasketTemplate(dish, item.amount);
-    }
-  }
-
-  if (basket.length === 0) {
-    container.innerHTML = deletedBasketHTML();
-    return;
-  }
-
-  let deliveryText = isDelivery ? `Lieferkosten +${deliveryCost.toFixed(2)} €` : "";
-  let displayTotal = isDelivery ? total + deliveryCost : total;
-
-  container.innerHTML += `
-    <div class="finish-conatiner">
-      <div>
-        <div class="x-stripe-container">
-          <div class="horizontal-strip"></div>
-        </div>
-        <h3>Gesamtbetrag</h3>
-        <h4>${deliveryText}</h4>
-        <span id="totalValue">Summe: ${displayTotal.toFixed(2)} €</span>
-      </div>
-
-      <div class="basket-finish-btn">
-        <button onclick="finshedBasket()" class="finish-btn" data-text="Awesome">
-          <span class="actual-text">BESTELLUNG</span>
-          <span aria-hidden="true" class="hover-text">AUFGEBEN</span>
-        </button>
-      </div>
-    </div>
-  `;
-}
 
 
 
@@ -137,7 +94,7 @@ function deleteDishFromBasket(dishId) {
   renderMobileBasket();
 }
 
-function finshedBasket() {
+function finishedBasket() {
   let hideInfoBasket = document.getElementById('hideInfoaddDishes');
   let emptyAlertRef = document.getElementById('emptyAlert');
   let finishAlertRef = document.getElementById('finishAlert');
@@ -165,6 +122,28 @@ function finshedBasket() {
   } 
 }
 
+function finishedBasketMobile() {
+  let popUpAlertMobileRef = document.getElementById('popUpAlertMobile');
+  let emptyAlertRef = document.getElementById('emptyAlert');
+  let finishAlertRef = document.getElementById('finishAlert');
+
+  if (basket.length === 0) {
+    emptyAlertRef.style.display = 'block';
+    setTimeout(() => {
+      emptyAlertRef.style.display = 'none';
+    }, 5000);
+  } else if (basket.length > 0) { 
+    finishAlertRef.style.display = 'block';
+    setTimeout(() => {
+      finishAlertRef.style.display = 'none';
+    }, 5000);
+
+    basket = [];
+
+    renderMobileBasket();
+  } 
+}
+
 function removeDishesBasket(dishId) {
   let dishInBasket = basket.find(item => item.dishId === dishId);
   if (dishInBasket) {
@@ -181,10 +160,12 @@ function removeDishesBasket(dishId) {
 function deliveryOption() {
     isDelivery = true;
     renderBasket();
+    renderMobileBasket();
 }
   
   function pickupOption(){
   isDelivery = false;
   renderBasket();
+  renderMobileBasket();
 }
 

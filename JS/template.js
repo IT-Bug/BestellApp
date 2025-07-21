@@ -84,37 +84,6 @@ function addDishesBasketTemplate(dish, amount) {
   `;
 }
 
-function addMobileDishesBasketTemplate(dish, amount) {
-  return `
-    <div class="dish-box-container">
-      <div class="dish-box-mobile">
-        <div class="headline-dish-basket">
-          <h3 style="font-size: 15px; text-decoration: underline;">${dish.name}</h3>
-          <h3 class="basketPrice" style="font-size: 15px;">${(dish.price * amount).toFixed(2)} €</h3>
-        </div>
-        <div class="discription-container">
-          <div class="dish-price-add-container">
-            <div id="hideTrash">${amount === 1 ? `<button onclick="deleteDishFromBasket(${dish.id})" aria-label="Delete item" class="delete-button">
-                      <svg class="trash-svg" viewBox="0 -10 64 74" xmlns="http://www.w3.org/2000/svg">
-                        <g id="trash-can">
-                          <rect x="16" y="24" width="32" height="30" rx="3" ry="3" fill="#e74c3c"></rect>
-                          <g transform-origin="12 18" id="lid-group">
-                            <rect x="12" y="12" width="40" height="6" rx="2" ry="2" fill="#c0392b"></rect>
-                            <rect x="26" y="8" width="12" height="4" rx="2" ry="2" fill="#c0392b"></rect>
-                          </g>
-                        </g>
-                      </svg>
-                    </button>` : `<p onclick="removeDishesBasket(${dish.id})" class="less-btn-basket">─</p>`}
-            </div>
-            <span id="amount">${amount}</span>
-            <p onclick="addDishesBasket(${dish.id})" class="add-btn-basket">✛</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
 function deletedBasketHTML() {
   let resetBasket = "";
 
@@ -169,7 +138,7 @@ function deletedBasketHTML() {
     </div>
 
     <div class="basket-finish-btn">
-      <button onclick="finshedBasket()" class="finish-btn" data-text="Awesome">
+      <button onclick="finishedBasket()" class="finish-btn" data-text="Awesome">
         <span class="actual-text">BESTELLUNG</span>
         <span aria-hidden="true" class="hover-text">AUFGEBEN</span>
       </button>

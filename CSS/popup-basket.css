@@ -15,7 +15,7 @@
     height: 100%;
     width: 100%;
     border-radius: 8px;
-    padding: 50px;
+    padding: 50 10px;
     filter: drop-shadow(1px 2px 10px #000000);
 }
 /* Basket Button MQ */
@@ -65,4 +65,25 @@
     background-color: #EFEDEA;
     border-radius: 24px;
     padding: 13px;
+}
+
+.delivery-pickup-container-mobile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+    background-color: #EFEDEA;
+    border-radius: 20px;
+    margin-bottom: 20px;    
+}
+
+.mobile-basket {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+        overflow-x: auto;
 }
