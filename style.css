@@ -20,7 +20,7 @@ footer {
     background-color: rgb(99, 99, 99);
 }
 
-.footer-links {
+footer a {
     color: #FFFFFF;
     padding: 20px;
 }

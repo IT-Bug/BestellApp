@@ -34,10 +34,7 @@ button {
   cursor: pointer;
 }
 
-a:hover {
-  transition: 0.2s ease-in;
-  color: #ff8000;
-}
+
 
 
 
@@ -75,29 +72,29 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.dish-catogery {
+.dish-category {
   --sb-track-color: #b9b9b9;
   --sb-thumb-color: #ff8000;
   --sb-size: 5px;
 }
 
-.dish-catogery::-webkit-scrollbar {
+.dish-category::-webkit-scrollbar {
   height: var(--sb-size)
 }
 
-.dish-catogery::-webkit-scrollbar-track {
+.dish-category::-webkit-scrollbar-track {
   background: var(--sb-track-color);
   border-radius: 3px;
 }
 
-.dish-catogery::-webkit-scrollbar-thumb {
+.dish-category::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 3px;
   
 }
 
 @supports not selector(::-webkit-scrollbar) {
-  .dish-catogery {
+  .dish-category {
     scrollbar-color: var(--sb-thumb-color)
                      var(--sb-track-color);
   }

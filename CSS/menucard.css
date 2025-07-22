@@ -1,14 +1,23 @@
-.main-content {
+
+.content-body {
+    min-height: 100vh;
     display: flex;
-    flex-direction: row-reverse;
     width: 100%;
 }
 
-.menu-content-container {
+.content-restaraunt {
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
-.menu-content {
+.content-restaraunt-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.restaraunt-head {
     height: 40vh;
     background-image: url('../assets/image/russischtraditionell.png');
     background-position: center;
@@ -19,7 +28,7 @@
     align-items: flex-end;
 }
 
-.myPic {
+.restaraunt-head img {
     border-radius: 120px;
     height: 120px;
     position: absolute;
@@ -41,6 +50,15 @@
     padding-top: 2px;
 }
 
+.headline-rating a {
+    color: #205f20;
+    font-weight: bold;
+}
+
+.headline-rating a:hover {
+    filter: drop-shadow(0px 0px 4px #208620);
+}
+
 .adress-box {
     border: 2px solid;
     margin: 50px 15px;
@@ -54,27 +72,13 @@
     align-items: center;
 }
 
-.rating {
-    color: green;
+.adress-box h1 {
+    font-size: large;
 }
 
-.ctgy-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.scrollbar-wrapper {
-    width: 98%; 
-    margin: 0 auto;
-    overflow-x: auto;
-    border-radius: 20px;
-    background: #f8eddc;
+.dish-category {
     border: 2px solid;
-    background-color: antiquewhite;
-}
-
-.dish-catogery {
+    background-color: #FAEBD7;
     display: flex;
     justify-content: space-around;
     gap: 10px;
@@ -82,94 +86,102 @@
     padding: 5px;
     border-radius: 20px;
     overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.dish-category p {
+    border-radius: 20px;
+    padding: 5px 8px;
+    cursor: pointer;
     font-weight: bold;
 }
 
-.ctgy-btn {
-    border-radius: 20px;
-    padding: 10px 8px;
-    cursor: pointer;
+.dish-category p:hover {
+    background-color: #ff80007a;
+    filter: drop-shadow(0px 0px 5px #a85501);
+    color: aliceblue;
 }
 
-.ctgy-btn:hover {
-    background-color: rgba(235, 235, 235, 0.37);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-/* Dishbox */
-
-#dishBoxContent {
-    margin: 15px 6px;
+.dish-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
-.dishes-container {
+#wrapper {
     display: flex;
     flex-direction: column;
-    border: 2px solid;
-    background-color: antiquewhite;
-    border-radius: 15px;
+    gap: 5px;
+    margin: 10px 1px 10px 1px;
 }
-
 
 .dish-box {
-    padding: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAEBD7;
+}
+
+.dish-image-headline {
+    padding: 4px;
+}
+
+.dish-image-headline h3 {
     text-align: center;
+    padding-top: 15px;
 }
 
-.dishes-container:hover {
-    background-color: rgba(94, 84, 59, 0);
-}
-
-.image-size-dishbox {
+.dish-bg-img {
     object-fit: cover;
     height: 160px;
     border-radius: 8px 8px 1px 1px; 
     width: 100%;
-    filter: drop-shadow(0px 0px 4px #000000);
+    filter: drop-shadow(0px 0px 3px #000000);
 }
 
-.headline-style {
-    padding: 10px;
+.x-stripe-container {
+    display: flex;
+    justify-content: center;
 }
 
 .horizontal-strip {
-    width: 100%;
-    height: 1px;
+    width: 98%;
+    height: 0.5px;
     background-color: black;
     margin: 8px 1px;
     border-radius: 8px;
 }
 
-.headline-dish-info-box { 
-    font-size: 23px;
-}
-
-.name-btn-container {
+.dish-name-btn {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    padding: 1px 40px 1px 20px;
 }
 
-.desc-price-container {
+.dish-name-btn button {
+    background-color: #F77C08;
+    color: #FAEBD7;
+    border: #ffffff00;
+    border-radius: 20px 1px 20px;
+}
+
+.dish-name-btn button:hover {
+    color: #000000;
+    background-color: #ffe81b;
+    filter: drop-shadow(0px 0px 3px #080808);
+}
+
+.dish-description-price {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding: 20px 20px;
-    gap: 20px;
-
+    justify-content: space-between;
+    padding: 20px 40px 20px 20px;
 }
 
-.p-style-dishBoxes{
-    font-size:  large;
-    text-align: start;
+.dish-description-price span {
     text-decoration: underline;
 }
 
-.display-none {
-    display: none !important;
+.dish-description-price p {
+    font-weight: bold;
 }

@@ -7,170 +7,71 @@
     <title>BestellApp</title>
 
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../CSS/default.css" />
-    <link rel="stylesheet" href="../CSS/images.css" />
-    <link rel="stylesheet" href="../CSS/genrateBtn.css" />
-    <link rel="stylesheet" href="../CSS/popup-language.css" />
-    <link rel="stylesheet" href="../CSS/menucard.css" />
-    <link rel="stylesheet" href="../CSS/sidenav.css" />
-    <link rel="stylesheet" href="../CSS/MQ-menu.css" />
-    <link rel="stylesheet" href="../CSS/hamster.css" />
-    <link rel="stylesheet" href="../CSS/popup-basket.css" />
-    <script src="../JS/Language.js"></script>
-    <script src="../JS/db.js"></script>
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/images.css" />
+    <link rel="stylesheet" href="../css/popup-language.css" />
+    <link rel="stylesheet" href="../css/menucard.css" />
+    <link rel="stylesheet" href="../css/basket.css" />
+    <link rel="stylesheet" href="../css/MQ-menu.css" />
+    <link rel="stylesheet" href="../css/hamster.css" />
+    <link rel="stylesheet" href="../css/basket-responsiv.css" />
+    <script src="../js/db.js"></script>
     <script src="../script.js"></script>
-    <script src="../JS/template.js"></script>
-    <script src="../JS/mobileBasket.js"></script>
-    <script src="../JS/calculate.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/mobileBasket.js"></script>
+    <script src="../js/basket.js"></script>
   </head>
 
   <body onload="init()">
-    <!-- Header Section -->
     <header>
       <a href="../index.html"><img class="header-logo" src="../assets/logos/BestellAppLogo.png" alt="BestellApp Logo"/></a>
       <img onclick="togglePopup()" class="logo" src="../assets/logos/world.png" alt="language"/>
     </header>
 
-    <!-- PopUp Languages -->
+    <main class="content-body">
+      <!-- content-restaurant -->
+      <section class="content-restaraunt">
+        <div class="content-restaraunt-body">
 
-    <div class="main-content">
-      <div class="popup" id="popup">
-        <div class="lang-headline">
-          <b data-i18n="langHeadline">Land</b>
-        </div>
-
-        <div class="main-logo-txt-container">
-          <div class="logo-txt-container" onclick="translatePage('en')">
-            <img class="lang-logos" src="../assets/logos/unitedkingdom.png" alt="English"/><span data-i18n="UK">Vereinigtes Königreich</span>
-          </div>
-          <div class="logo-txt-container" onclick="translatePage('de')">
-            <img class="lang-logos" src="../assets/logos/german.png" alt="Deutsch"/><span data-i18n="DE">Deutschland</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Side Nav -->
-
-      <div class="sideNavContainer">
-        <div id="mySidenav" class="sidenav">
-          <h2 data-i18n="basketHeadline" style="padding: 30px 20px; display: flex; justify-content: center">
-            Warenkorb
-          </h2>
-
-      <div class="delivery-pickup-container">
-          <div class="checkbox-logo-container" onclick="deliveryOption()">
-            <img src="../assets/logos/carblack.png" id="checkboxDelivery" >
-            <span class="custom-checkbox"></span>
-            <span style="margin-left: 8px;">Liefern</span>
-          </div>
-          <div class="checkbox-logo-container"  onclick="pickupOption()">
-            <img src="../assets/logos/handbasketblack.png" id="checkboxPickup" class="ui-checkbox">
-            <span style="margin-left: 8px;">Abholung</span>
-          </div>
-      </div>
-
-          <!-- PopUp empty alert -->
-        
-          <div id="emptyAlert" class="empty-alert">
-            <span style="color: aliceblue;">Dein Warenkorb ist Leer, fülle Ihn damit du die Bestellung abschließen kannst.</span>
+          <div class="restaraunt-head">
+            <img src="../assets/image/ich.png" alt="Image Face">
           </div>
 
-          <!-- PopUp finished alert -->
-
-          <div id="finishAlert" class="finish-alert">
-            <span>Vielen Dank für Ihren Einkauf, Ihre Bestellung wird vorbereitet!</span>
-          </div>
-
-          <div id="hideInfoaddDishes" style="overflow-x: inherit; height: inherit; ">
-            <div id="basket" class="basket">
-              <img src="../assets/logos/basket.png" height="50px" alt="warenkorb logo"/>
-              <h2>Vergiss nicht dein Warenkorb zu füllen</h2>
-              <p>
-                Suche deine Lieblingsgerichte aus oder probier etwas Neues, pack
-                die Gerichte in dein Warenkorb und bestelle dein Essen.
-              </p>
+          <div class="info-container">
+            <div class="headline-rating">
+              <h1>Moskau's Küche</h1>
+              <a href="https://de.trustpilot.com/">Bewertung (4.8 von 5) ⭐</a>
             </div>
-
-            <!-- Generated a Hamster -->
-            <div class="hamster-container">
-              <div  aria-label="Orange and tan hamster running in a metal wheel"  role="img"  class="wheel-and-hamster">
-                <!-- From Uiverse.io by Nawsome -->
-                <div class="wheel"></div>
-                <div class="hamster">
-                  <div class="hamster__body">
-                    <div class="hamster__head">
-                      <div class="hamster__ear"></div>
-                      <div class="hamster__eye"></div>
-                      <div class="hamster__nose"></div>
-                    </div>
-                    <div class="hamster__limb hamster__limb--fr"></div>
-                    <div class="hamster__limb hamster__limb--fl"></div>
-                    <div class="hamster__limb hamster__limb--br"></div>
-                    <div class="hamster__limb hamster__limb--bl"></div>
-                    <div class="hamster__tail"></div>
-                  </div>
-                </div>
-                <div class="spoke"></div>
-              </div>
-            </div>
-
-            <div class="basket-finish-btn">
-              <button class="finish-btn" data-text="Awesome">
-                <span class="actual-text">BESTELLUNG</span>
-                <span onclick="finishedBasket()" aria-hidden="true" class="hover-text">AUFGEBEN</span>
-              </button>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Menu Content -->
-
-      <div class="menu-content-container">
-        <div class="menu-content">
-          <img class="myPic" src="../assets/image/Ich.png" alt="Bild von mir" />
-        </div>
-
-        <div class="info-container">
-          <div class="headline-rating">
-            <h1>Moskau's Küche</h1>
-            <a class="rating" href="https://de.trustpilot.com/">Bewertung (4.8 von 5) ⭐</a>
-          </div>
-          <div class="adress-box">
-            <h1 style="font-size: large">Adresse</h1>
-            <p>Moskauerstraße 7a
-            <p>77077 Fremdstadt</p>
-          </div>
-        </div>
-
-          <!-- Dishes Menu and Basket -->
-
-          <div id="dishesContainer">
-            <div id="dishBox">
-              <div id="dishBoxContent"></div>
+            <div class="adress-box">
+              <h1>Adresse</h1>
+              <p>Moskauerstraße 7a
+              <p>77077 Fremdstadt</p>
             </div>
           </div>
 
-          <!-- mobile basket -->
+          <nav class="dish-category">
+            <p>Suppen</p>
+            <p>Vorspeisen</p>
+            <p>Hauptgericht</p>
+            <p>Nachtisch</p>
+            <p>Getränke</p>
+            <p>Extras</p>
+          </nav>
 
-          <div id="popUpBasket" class="display-none"></div>
-
-          <div class="basket-btn-container">
-            <div onclick="openBasketPopUp()" class="basket-button">
-              <img style="height: 60px" src="../assets/logos/BasketPopUp.png" />
-            </div>
+          <div class="dish-container">
+            <div id="wrapper"></div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Footer Section -->
+        </div>
+      </section>
+      <!-- basket-wrapper -->
+      <aside class="basket-wrapper"></aside>
+    </main>
 
     <footer>
-      <a data-i18n="footerImp" class="footer-links" href="">Impressum</a>
-      <a data-i18n="footerDatstz" class="footer-links" href="">Datenschutz</a>
-      <a data-i18n="footerContact" class="footer-links" href="">Kontakt</a>
+      <a data-i18n="footerImp" href="">Impressum</a>
+      <a data-i18n="footerDatstz" href="">Datenschutz</a>
+      <a data-i18n="footerContact" href="">Kontakt</a>
     </footer>
   </body>
 </html>

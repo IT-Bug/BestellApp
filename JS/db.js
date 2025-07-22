@@ -1,7 +1,7 @@
 
 let dishes = [
     {
-        id: 1,
+        id: 0,
         headline: "Beste Wahl",
         imgDish: "../assets/image/pilmeni.jpg",
         backgroundImg: true,
@@ -10,7 +10,7 @@ let dishes = [
         description: "Teigtaschen mit auswählbarer Füllung (Rindfleisch, Pute oder Schweinefleisch)",
     },
     {
-        id: 2,
+        id: 1,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -19,7 +19,7 @@ let dishes = [
         description: "Suppe Russischer Art mit Rindfleisch, Kraut, Rote Bete, Karotte, Kartoffel",
     },
     {
-        id: 3,
+        id: 2,
         headline: "Vorspeisen und Salate",
         imgDish: "../assets/image/vorspeise.jpg",
         backgroundImg: true,
@@ -28,7 +28,7 @@ let dishes = [
         description: "3 Blenie gefüllt mit Hackfleisch",
     },
     {
-        id: 4,
+        id: 3,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -37,7 +37,7 @@ let dishes = [
         description: "Käse, Knoblauch, Mayonnaise",
     },
     {
-        id: 5,
+        id: 4,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -46,7 +46,7 @@ let dishes = [
         description: "Karotten, Mayonnaise, Knoblauch",
     },
     {
-        id: 6,
+        id: 5,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -55,7 +55,7 @@ let dishes = [
         description: "Rindfleisch, Knoblauch, Ei",
     },
     {
-        id: 7,
+        id: 6,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -64,7 +64,7 @@ let dishes = [
         description: "Probierteller bestehend aus 3ver. Salaten: Belochka, Zagadka und Knoblauch-Karottensalat",
     },
     {
-        id: 8,
+        id: 7,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -73,7 +73,7 @@ let dishes = [
         description: "Karotten, Zwiebel, Essig",
     },
     {
-        id: 9,
+        id: 8,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -82,7 +82,7 @@ let dishes = [
         description: "Kartoffel, Wurst, eingelegte Gurke, Ei, Erbsen",
     },
     {
-        id: 10,
+        id: 9,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -91,7 +91,7 @@ let dishes = [
         description: "Kartoffel, rote Bete, eingelegtes Kraut, Erbsen",
     },
     {
-        id: 11,
+        id: 10,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -100,7 +100,7 @@ let dishes = [
         description: "Probierteller bestehend aus 3 ver. Salaten: Oliviesalat, Vinigret und Karottensalat nach Koreanischer Art",
     },
     {
-        id: 12,
+        id: 11,
         headline: "Hauptgerichte",
         imgDish: "../assets/image/shashlick.jpg",
         backgroundImg: true,
@@ -109,7 +109,7 @@ let dishes = [
         description: "deutsches Schweinefleisch vom Metzger, gegrillte 2 spieße mit Beilage und Beilagensalat",
     },
     {
-        id: 13,
+        id: 12,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -118,7 +118,7 @@ let dishes = [
         description: "Geflügel gegrillte 2 Spieße mit Beilagen",
     },
     {
-        id: 14,
+        id: 13,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -127,7 +127,7 @@ let dishes = [
         description: "Lammfleisch geschmort mit Reis",
     },
     {
-        id: 15,
+        id: 14,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -136,7 +136,7 @@ let dishes = [
         description: "Teigtaschen mit Kartoffel- oder Quarkfüllung Serviert mit Schmand",
     },
     {
-        id: 16,
+        id: 15,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -145,7 +145,7 @@ let dishes = [
         description: "Wassergedampfte Teigtaschen mit Schweine- und- oder Rindfleischfüllung",
     },
     {
-        id: 17,
+        id: 16,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -154,7 +154,7 @@ let dishes = [
         description: "Frittierte Teigtaschen mit Schweine- und- oder Rindfleischfüllung/ Käsefüllung",
     },
     {
-        id: 18,
+        id: 17,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -163,7 +163,7 @@ let dishes = [
         description: "gekochte Nudeln mit Rindfleisch gegart mit Soße",
     },
     {
-        id: 19,
+        id: 18,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -172,7 +172,7 @@ let dishes = [
         description: "Putenschnitzel mit Beilagen",
     },
     {
-        id: 20,
+        id: 19,
         headline: "Nachtisch",
         imgDish: "../assets/image/nachtisch.jpg",
         backgroundImg: true,
@@ -181,7 +181,7 @@ let dishes = [
         description: "",
     },
     {
-        id: 21,
+        id: 20,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -190,7 +190,7 @@ let dishes = [
         description: "",
     },
     {
-        id: 22,
+        id: 21,
         headline: "Heiße Getränke",
         imgDish: "../assets/image/hotDrinks.png",
         backgroundImg: true,
@@ -199,7 +199,7 @@ let dishes = [
         description: "Hausgemachter Schwarzer Tee 100ml",
     },
     {
-        id: 23,
+        id: 22,
         headline: "",
         imgDish: "",
         backgroundImg: false,
@@ -208,7 +208,7 @@ let dishes = [
         description: "Kaffe mit aufgeschäumter Milch 100ml",
     },
     {
-        id: 24,
+        id: 23,
         headline: "Kalte Getränke",
         imgDish: "../assets/image/colddrinks.png",
         backgroundImg: true,

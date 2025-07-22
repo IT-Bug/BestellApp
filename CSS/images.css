@@ -11,6 +11,7 @@
 
 .header-logo:hover {
     filter: drop-shadow(1px 3px 4px #0000008c);
+    transition: 0.2s ease-in;
 }
 
 .logo {
@@ -21,6 +22,7 @@
 
 .logo:hover {
     filter: drop-shadow(1px 3px 4px #0000008c);
+    transition: 0.2s ease-in;
 }
 
 .lang-logos {

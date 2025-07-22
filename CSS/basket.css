@@ -1,0 +1,9 @@
+
+.basket-wrapper {
+    position: sticky;
+    right: 0;
+    width: 28%;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+}
