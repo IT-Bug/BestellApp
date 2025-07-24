@@ -23,3 +23,37 @@ function getDishesTemplate(dish) {
     </article>
     `;
 }
+
+function getBasketTemplate() {
+    return `
+    <div class="basket-headline">
+        <h2>Warenkorb</h2>
+    </div>
+
+    <div class="option-container">
+        <div class="option-btn" onclick="deliveryOption()">
+            <img src="../assets/logos/carblack.png" id="checkboxDelivery" >
+            <span>Liefern</span>
+        </div>
+
+        <div class="option-btn"  onclick="pickupOption()">
+            <img src="../assets/logos/handbasketblack.png" id="checkboxPickup" class="ui-checkbox">
+            <span>Abholung</span>
+        </div>
+    </div>
+
+    <div id="basketInfo"> 
+        <img src="../assets/logos/basket.png" height="50px" alt="warenkorb logo"/>
+        <h3>Vergiss nicht dein Warenkorb zu füllen</h3><br>
+        <p>
+            Suche deine Lieblingsgerichte aus oder probier etwas Neues, pack
+            die Gerichte in dein Warenkorb und bestelle dein Essen.
+        </p>
+    </div>
+    
+    <div class="order-container">
+        <button>Bestellung aufgeben</button>
+    </div>
+
+    `;
+}

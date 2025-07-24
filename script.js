@@ -5,6 +5,7 @@ function docId(id) {
 
 function init() {
     renderDishes();
+    renderBasket();
 }
 
 function renderDishes() {

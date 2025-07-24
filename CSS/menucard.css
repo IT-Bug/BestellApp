@@ -163,13 +163,11 @@
     background-color: #F77C08;
     color: #FAEBD7;
     border: #ffffff00;
-    border-radius: 20px 1px 20px;
+    border-radius: 20px 20px 20px 1px;
 }
 
 .dish-name-btn button:hover {
-    color: #000000;
-    background-color: #ffe81b;
-    filter: drop-shadow(0px 0px 3px #080808);
+    filter: drop-shadow(0px 0px 3px #ff6600);
 }
 
 .dish-description-price {
